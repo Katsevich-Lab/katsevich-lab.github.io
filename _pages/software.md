@@ -8,21 +8,11 @@ permalink: /software/
 
 # Software
 
-<div class="container-fluid">
-    <div class="row">
-    <div class="col-sm-4">
-        <figure>
-        <a href="https://katsevich-lab.github.io/sceptre/">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex.png" style="width: 250px">
-        </a>  
-        <figcaption>robust single-cell CRISPR screen analysis</figcaption>
-    </div>
-    <div class="col-sm-4">
-    <figure>
-    <a href="https://timothy-barry.github.io/ondisc/">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/ondisc-hex.png" style="width: 250px">
-    </a>  
-    <figcaption>large-scale computing on single-cell data</figcaption>
-    </figure>
-    </div>
-</div>
+<p style="text-align:center;">
+<a href="https://katsevich-lab.github.io/sceptre/">
+<img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:250px;margin:0px 50px">
+</a>  
+<a href="https://timothy-barry.github.io/ondisc/">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/ondisc-hex-annotated.png" style="width:250px;margin:0px 50px">
+</a>  
+</p>
