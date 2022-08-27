@@ -6,18 +6,11 @@ sitemap: false
 permalink: /
 ---
 
-The mission of the Katsevich Lab is to unravel the regulatory wiring of the human genome, with the ultimate goal of understanding the molecular basis of human diseases. For example, mapping enhancers to their target genes helps uncover disease mechanisms.
-
-<p style="text-align:center;">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/gene-enhancer.png" style="width: 600px">
-</p>
-
-<br/>
-To this end, we develop novel statistical methodologies to analyze the data produced by cutting-edge single cell genomics assays, such as single cell CRISPR screens and single cell multi-omics data. We back these methods with statistical theory and implement them in high-quality softwares aimed at biologists. This puts us at the intersection of statistics, genomics, and computation.
-
+We are a team of researchers at the University of Pennsylvania working at the intersection of statistics, genomics, and computation:
 <p style="text-align:center;">
   <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-genomics-computation.png" style="width: 600px">
 </p>
+Read more about [our research](https://katsevich-lab.github.io/research). 
 
 <br/>
  **We are  looking for passionate new master students, PhD students, postdocs, and bioinformaticians to join the team.** Please [email Gene](mailto:ekatsevi@wharton.upenn.edu) if you are interested.
