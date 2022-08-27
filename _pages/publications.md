@@ -1,67 +1,27 @@
 ---
-title: "Allan Lab - Publications"
-layout: gridlay
-excerpt: "Allan Lab -- Publications."
+title: "Katsevich Lab - Publications"
+layout: archive
+excerpt: "Katsevich -- Publications."
 sitemap: false
 permalink: /publications/
 ---
 
+Statistics
+-======
 
-# Publications
+- T. Barry, E. Katsevich, K. Roeder. *Exponential family measurement error models for single-cell CRISPR screens*. Preprint. ([paper](https://arxiv.org/abs/2201.01879), [code](https://github.com/timothy-barry/glmeiv-manuscript), [results](https://upenn.box.com/v/glmeiv-files-v1))
+- J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Preprint. ([paper](https://arxiv.org/abs/2102.11253))
+- E. Katsevich, A. Ramdas. *A theoretical treatment of conditional independence testing under Model-X*. Preprint. ([paper](https://arxiv.org/abs/2005.05506), [slides](https://ekatsevi.github.io/files/Katsevich_JSM_2020.pdf))
+- M. Liu, E. Katsevich, L. Janson, A. Ramdas. *Fast and Powerful Conditional Randomization Testing via Distillation*. Biometrika, 2021. ([paper](https://arxiv.org/abs/2006.03980), [code](https://github.com/moleibobliu/Distillation-CRT))
+- E. Katsevich, C. Sabatti, M. Bogomolov. *Filtering the rejection set while preserving false discovery rate control*. Journal of the American Statistical Association, 2021. ([paper](https://arxiv.org/abs/1809.01792),  [code](https://github.com/ekatsevi/Focused-BH), [slides](http://ekatsevi.github.io/files/FocusedBH_slides.pdf))
+- E. Katsevich, A. Ramdas. *Simultaneous high-probability bounds on the FDP in structured, regression and online settings*. Annals of Statistics, 2020. ([paper](https://arxiv.org/abs/1803.06790), [code](https://github.com/ekatsevi/simultaneous-fdp), [slides](http://ekatsevi.github.io/files/FDP_bound_slides.pdf))
+- E. Katsevich, C. Sabatti. *Multilayer Knockoff Filter: Controlled variable selection at multiple resolutions*. Annals of Applied Statistics, 2019. ([paper](https://projecteuclid.org/euclid.aoas/1554861639),  [code](https://ekatsevi.github.io/files/multilayer_knockoff_filter.zip), [slides](http://ekatsevi.github.io/files/MKF_slides.pdf))
 
-## Group highlights
+Genetics and genomics
+-======
 
-**At the end of this page, you can find the [full list of publications and patents](#full-list-of-publications). All papers are also available on [arXiv](https://arxiv.org/search/?searchtype=author&query=Allan%2C+M+P).**
+-  J. A. Morris,  Z. Daniloski,  J. Domingo, T. Barry, M. Ziosi,  D. A. Glinos, S. Hao,  E. Mimitou,  P. Smibert,  K. Roeder,  E. Katsevich,  T. Lappalainen,  N. E. Sanjana. *Discovery of target genes and pathways of blood trait loci using pooled CRISPR screens and single cell RNA sequencing*. Preprint. ([paper](https://doi.org/10.1101/2021.04.07.438882))
+- E. Katsevich, T. Barry, K. Roeder. *SCEPTRE improves calibration and sensitivity in single-cell CRISPR screen analysis*. Genome Biology, 2021. ([paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02545-2), [slides](https://ekatsevi.github.io/files/SCEPTRE_slides.pdf), [software](https://katsevich-lab.github.io/sceptre/), [results](https://upenn.box.com/v/sceptre-files-v8))
+- M. Sesia, E. Katsevich, S. Bates, E. Candes, C. Sabatti. *Multi-resolution localization of causal variants across the genome*. Nature Communications, 2020. ([paper](https://www.nature.com/articles/s41467-020-14791-2), [website](https://msesia.github.io/knockoffzoom/))
+- J. Zhu, Q. Zhao, E. Katsevich, C. Sabatti. *Exploratory Gene Ontology Analysis with Interactive Visualization*. Nature Scientific Reports, 2019. ([paper](https://www.nature.com/articles/s41598-019-42178-x), [website](http://aegis.stanford.edu/))
 
-{% assign number_printed = 0 %}
-{% for publi in site.data.publist %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if publi.highlight == 1 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
- <div class="well">
-  <pubtit>{{ publi.title }}</pubtit>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
-  <p>{{ publi.description }}</p>
-  <p><em>{{ publi.authors }}</em></p>
-  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
-  <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
-  <p> {{ publi.news2 }}</p>
- </div>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endif %}
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-<p> &nbsp; </p>
-
-
-## Patents
-<em>Milan P Allan, S Gröblacher, RA Norte, M Leeuwenhoek</em><br />Novel atomic force microscopy probes with phononic crystals<br /> PCT/NL20-20/050797 (2020)
-
-<em>Milan P Allan</em><br /> Methods of manufacturing superconductor and phononic elements <br /> <a href="https://patents.google.com/patent/US10439125B2/en?inventor=Milan+ALLAN&oq=inventor:(Milan+ALLAN)">US10439125B2 (2016)</a>
-
-## Full List of publications
-
-{% for publi in site.data.publist %}
-
-  {{ publi.title }} <br />
-  <em>{{ publi.authors }} </em><br /><a href="{{ publi.link.url }}">{{ publi.link.display }}</a>
-
-{% endfor %}
