@@ -27,5 +27,6 @@ We are grateful for funding from the [National Science Foundation](https://www.n
 
 <p style="text-align:center;">
   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/nsf-logo.png" style="height: 110px">
+  <div class="horizontalgap" style="width:50px"></div>
   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/wharton_analytics.png" style="height: 80px">
 </p>
