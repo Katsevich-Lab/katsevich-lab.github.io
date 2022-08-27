@@ -15,8 +15,6 @@ To this end, we develop novel statistical methodologies to analyze the data prod
 We are grateful for funding from the [National Science Foundation](https://www.nsf.gov/) and [Analytics at Wharton](https://analytics.wharton.upenn.edu/).
 
 <figure class="fourth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Leiden.jpg" style="width: 210px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Nanofront.jpg" style="width: 110px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_NWO.jpg" style="width: 120px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_ERC.jpg" style="width: 110px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/nsf-logo.png" style="width: 210px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/wharton_analytics.png" style="width: 110px">
 </figure>
