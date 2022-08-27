@@ -6,30 +6,30 @@
   education1: PhD in Statistics, Stanford University (2019)
   
 - name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
-  photo: rock.jpg
-  info: PhD student, started Jan 2020
+  photo: tim-barry.png
+  info: Statistics PhD student at CMU, started Jan 2020
   email: tbarry2@andrew.cmu.edu
   number_educ: 1
   education1: BS in Math and Computer, University of Maryland (2018)
   
 - name: Abhinav Chakraborty
-  photo: rock.jpg
-  info: PhD student, started Jan 2020
-  email: tbarry2@andrew.cmu.edu
+  photo: abhinav-chakraborty.jpeg
+  info: Statistics PhD student at UPenn, started Jan 2020
+  email: abch@wharton.upenn.edu
   number_educ: 1
-  education1: BS in Math and Computer, University of Maryland (2018)
+  education1: MS in Statistics, Indian Statistical Institute (2020)
   
-- name: Abhinav Chakraborty
-  photo: rock.jpg
-  info: PhD student, started Jan 2020
-  email: tbarry2@andrew.cmu.edu
+- name: Ziang Niu
+  photo: ziang-niu.jpeg
+  info: AMCS Masters student at UPenn, started Jan 2020
+  email: ziangniu@upenn.edu
   number_educ: 1
-  education1: BS in Math and Computer, University of Maryland (2018)
+  education1: BS in Math and Statistics, Renmin University (2021)
   
 - name: "This could be you !"
   photo: rock.jpg
-  info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
-  email: milan.allan@gmail.com
+  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
+  email: ekatsevi@wharton.upenn.edu
   number_educ: 0
   education1:
   education2:
