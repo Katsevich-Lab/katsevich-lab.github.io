@@ -21,4 +21,4 @@ To this end, we develop novel statistical methodologies to analyze the data prod
   <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-areas.png" style="width: 600px">
 </p>
 
-We back these methods with statistical theory and implement them in high-quality softwares aimed at biologists.
+We back these methods with statistical theory and implement them in high-quality [softwares](https://katsevich-lab.github.io/research) aimed at biologists.

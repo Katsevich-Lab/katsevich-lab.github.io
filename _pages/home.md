@@ -6,7 +6,7 @@ sitemap: false
 permalink: /
 ---
 
-We are a team of researchers at the University of Pennsylvania working at the intersection of statistics, genomics, and computation:
+We are a [team](https://katsevich-lab.github.io/team) of researchers at the University of Pennsylvania working at the intersection of statistics, genomics, and computation:
 <p style="text-align:center;">
   <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-genomics-computation.png" style="width: 600px">
 </p>
