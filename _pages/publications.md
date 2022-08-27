@@ -1,6 +1,6 @@
 ---
 title: "Katsevich Lab - Publications"
-layout: archive
+layout: default
 excerpt: "Katsevich -- Publications."
 sitemap: false
 permalink: /publications/
