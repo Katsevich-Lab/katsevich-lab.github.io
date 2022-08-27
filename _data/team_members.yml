@@ -1,10 +1,31 @@
-- name: <a href="ekatsevi.github.io">Eugene Katsevich</a>
+- name: <a href="https://ekatsevi.github.io/">Eugene Katsevich</a>
   photo: Eugene_Katsevich_square.jpg
   info: Assistant professor, started Jul 2020
   email: ekatsevi@wharton.upenn.edu
   number_educ: 1
-  education1: PhD Stanford Statistics (2019)
-
+  education1: PhD in Statistics, Stanford University (2019)
+  
+- name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
+  photo: rock.jpg
+  info: PhD student, started Jan 2020
+  email: tbarry2@andrew.cmu.edu
+  number_educ: 1
+  education1: BS in Math and Computer, University of Maryland (2018)
+  
+- name: Abhinav Chakraborty
+  photo: rock.jpg
+  info: PhD student, started Jan 2020
+  email: tbarry2@andrew.cmu.edu
+  number_educ: 1
+  education1: BS in Math and Computer, University of Maryland (2018)
+  
+- name: Abhinav Chakraborty
+  photo: rock.jpg
+  info: PhD student, started Jan 2020
+  email: tbarry2@andrew.cmu.edu
+  number_educ: 1
+  education1: BS in Math and Computer, University of Maryland (2018)
+  
 - name: "This could be you !"
   photo: rock.jpg
   info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
