@@ -21,6 +21,24 @@ permalink: /software/
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-6 clearfix">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:100px;margin:0px 10px">
+  </div>
+  <div class="col-sm-6 clearfix">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:100px;margin:0px 10px">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 clearfix">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" class="img-responsive" width="25%" style="float: left" />
+  </div>
+  <div class="col-sm-6 clearfix">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" class="img-responsive" width="25%" style="float: left" />
+  </div>
+</div>
+
 <p style="text-align:center;">
 <a href="https://katsevich-lab.github.io/sceptre/">
 <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:100px;margin:0px 10px">
