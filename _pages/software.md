@@ -16,3 +16,8 @@ permalink: /software/
   <img src="{{ site.url }}{{ site.baseurl }}/images/ondisc-hex-annotated.png" style="width:100px;margin:0px 10px">
 </a>  
 </p>
+
+<p style="text-align:center;">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/nsf-logo.png" style="height:110px;margin:0px 50px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/wharton_analytics.png" style="height:80px;margin:0px 50px">
+</p>
