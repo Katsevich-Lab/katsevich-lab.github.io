@@ -1,6 +1,6 @@
 ---
 title: "Katsevich Lab - Software"
-layout: default
+layout: gridlay
 excerpt: "Katsevich -- Software"
 sitemap: false
 permalink: /software/
