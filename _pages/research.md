@@ -15,7 +15,7 @@ The mission of the Katsevich Lab is to unravel the regulatory wiring of the huma
 </p>
 
 <br/>
-To this end, we develop novel statistical methodologies to analyze the data produced by cutting-edge single cell genomics assays, such as single cell CRISPR screens and single cell multi-omics data. These methodologies span an interconnected set of statistical research areas:
+To this end, we develop novel statistical methodologies to analyze the data produced by cutting-edge single cell genomics assays, such as single cell CRISPR screens and single cell multi-omics data ([publications](https://katsevich-lab.github.io/publications/)). These methodologies span an interconnected set of statistical research areas:
 
 <p style="text-align:center;">
   <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-areas.png" style="width: 80%">
