@@ -1,0 +1,7 @@
+- name: <a href="https://katsevich-lab.github.io/sceptre/">sceptre</a>
+  blurb: robust single-cell CRISPR screen analysis
+  logo: sceptre-hex.png
+  
+- name: <a href="https://timothy-barry.github.io/ondisc/">ondisc</a>
+  blurb: large-scale computing on single-cell data
+  logo: ondisc-hex.png
