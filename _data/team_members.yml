@@ -2,29 +2,29 @@
   photo: Eugene_Katsevich_square.jpg
   info: Assistant professor, started summer 2020
   email: ekatsevi@wharton.upenn.edu
-  number_educ: 1
-  education1: PhD in Statistics, Stanford University (2019)
+  number_educ: 0
+  education1: 
   
 - name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
   photo: tim-barry.jpeg
   info: Statistics PhD student at CMU, started spring 2020
   email: tbarry2@andrew.cmu.edu
-  number_educ: 1
-  education1: BS in Math and Computer, University of Maryland (2018)
+  number_educ: 0
+  education1:
   
 - name: Abhinav Chakraborty
   photo: abhinav-chakraborty.jpeg
   info: Statistics PhD student at UPenn, started fall 2021
   email: abch@wharton.upenn.edu
-  number_educ: 1
-  education1: MS in Statistics, Indian Statistical Institute (2020)
+  number_educ: 0
+  education1: 
   
 - name: Ziang Niu
   photo: ziang-niu.jpeg
   info: AMCS Masters student at UPenn, started spring 2022
   email: ziangniu@upenn.edu
-  number_educ: 1
-  education1: BS in Math and Statistics, Renmin University (2021)
+  number_educ: 0
+  education1: 
   
 - name: "This could be you !"
   photo: rock.jpg
