@@ -8,7 +8,7 @@ permalink: /
 
 We are a [team](https://katsevich-lab.github.io/team) of researchers at the University of Pennsylvania working at the intersection of statistics, genomics, and computation:
 <p style="text-align:center;">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-genomics-computation.png" style="width: 60%px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/statistics-genomics-computation.png" style="width: 60%">
 </p>
 Read more about [our research](https://katsevich-lab.github.io/research). 
 
