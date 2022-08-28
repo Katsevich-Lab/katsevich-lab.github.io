@@ -1,12 +1,25 @@
 ---
 title: "Katsevich Lab - Software"
-layout: default
+layout: gridlay
 excerpt: "Katsevich -- Software"
 sitemap: false
 permalink: /software/
 ---
 
 # Software
+
+<div class="row">
+  <div class="col-sm-6 clearfix">
+    <a href="https://katsevich-lab.github.io/sceptre/">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:100px;margin:0px 10px">
+    </a> 
+  </div>
+  <div class="col-sm-6 clearfix">
+    <a href="https://katsevich-lab.github.io/sceptre/">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/ondisc-hex-annotated.png" style="width:100px;margin:0px 10px">
+    </a> 
+  </div>
+</div>
 
 <p style="text-align:center;">
 <a href="https://katsevich-lab.github.io/sceptre/">
@@ -21,6 +34,8 @@ permalink: /software/
   <img src="{{ site.url }}{{ site.baseurl }}/images/sceptre-hex-annotated.png" style="width:100px;margin:0px 10px">
   <img src="{{ site.url }}{{ site.baseurl }}/images/ondisc-hex-annotated.png" style="width:100px;margin:0px 10px">
 </p>
+
+
 
 <p style="text-align:center;">
   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/nsf-logo.png" style="height:110px;margin:0px 50px">
