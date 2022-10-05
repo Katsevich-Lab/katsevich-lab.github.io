@@ -10,7 +10,7 @@ Statistics
 -======
 
 - T. Barry, E. Katsevich, K. Roeder. *Exponential family measurement error models for single-cell CRISPR screens*. Preprint. ([paper](https://arxiv.org/abs/2201.01879), [code](https://github.com/timothy-barry/glmeiv-manuscript), [results](https://upenn.box.com/v/glmeiv-files-v1))
-- J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Preprint. ([paper](https://arxiv.org/abs/2102.11253))
+- J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Scandinavian Journal of Statistics. ([paper](https://doi.org/10.1111/sjos.12614))
 - E. Katsevich, A. Ramdas. *A theoretical treatment of conditional independence testing under Model-X*. Preprint. ([paper](https://arxiv.org/abs/2005.05506), [slides](https://ekatsevi.github.io/files/Katsevich_JSM_2020.pdf))
 - M. Liu, E. Katsevich, L. Janson, A. Ramdas. *Fast and Powerful Conditional Randomization Testing via Distillation*. Biometrika, 2021. ([paper](https://arxiv.org/abs/2006.03980), [code](https://github.com/moleibobliu/Distillation-CRT))
 - E. Katsevich, C. Sabatti, M. Bogomolov. *Filtering the rejection set while preserving false discovery rate control*. Journal of the American Statistical Association, 2021. ([paper](https://arxiv.org/abs/1809.01792),  [code](https://github.com/ekatsevi/Focused-BH), [slides](http://ekatsevi.github.io/files/FocusedBH_slides.pdf))
