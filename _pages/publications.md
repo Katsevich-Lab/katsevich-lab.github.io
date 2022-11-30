@@ -9,7 +9,7 @@ permalink: /publications/
 Statistics
 -======
 
-- Z. Niu*, A. Chakraborty*, O. Dukes, E. Katsevich. *Reconciling model-X and doubly robust approaches to conditional independence testing*. Preprint. ([paper](https://arxiv.org/abs/2211.14698))
+- Z. Niu\*, A. Chakraborty\*, O. Dukes, E. Katsevich. *Reconciling model-X and doubly robust approaches to conditional independence testing*. Preprint. ([paper](https://arxiv.org/abs/2211.14698))
 - T. Barry, E. Katsevich, K. Roeder. *Exponential family measurement error models for single-cell CRISPR screens*. Preprint. ([paper](https://arxiv.org/abs/2201.01879), [code](https://github.com/timothy-barry/glmeiv-manuscript), [results](https://upenn.box.com/v/glmeiv-files-v1))
 - J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Scandinavian Journal of Statistics, 2022. ([paper](https://doi.org/10.1111/sjos.12614))
 - E. Katsevich, A. Ramdas. *On the power of conditional independence testing under model-X*. Electronic Journal of Statistics, to appear, 2022. ([paper](https://arxiv.org/abs/2005.05506), [slides](https://ekatsevi.github.io/files/Katsevich_JSM_2020.pdf))
