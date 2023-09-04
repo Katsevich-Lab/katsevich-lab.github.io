@@ -21,7 +21,7 @@
   
 - name: <a href="https://ziangniu6.github.io/">Ziang Niu</a>
   photo: ziang-niu.jpeg
-  info: AMCS Masters student at UPenn, started spring 2022
+  info: Statistics PhD student at UPenn, started spring 2022
   email: ziangniu@upenn.edu
   number_educ: 0
   education1: 
@@ -39,13 +39,20 @@
   email: 
   number_educ: 0
   education1: 
-  
-- name: "This could be you!"
-  photo: smiley.png
-  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
-  email: ekatsevi@wharton.upenn.edu
+
+- name: <a href="https://www.jld-stats.com/">Joseph Deutsch</a>
+  photo: joseph-deutsch.jpeg
+  info: Statistics PhD student at UPenn, started summer 2023
+  email: 
   number_educ: 0
-  education1:
-  education2:
+  education1: 
+  
+# - name: "This could be you!"
+#  photo: smiley.png
+#  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
+#  email: ekatsevi@wharton.upenn.edu
+#  number_educ: 0
+#  education1:
+#  education2:
   education3:
   education4:

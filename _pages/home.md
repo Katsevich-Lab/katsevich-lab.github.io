@@ -12,8 +12,10 @@ We are a [team](https://katsevich-lab.github.io/team) of researchers at the Univ
 </p>
 Read more about [our research](https://katsevich-lab.github.io/research). 
 
+<!---
 <br/>
  **We are  looking for passionate new master students, PhD students, postdocs, and bioinformaticians to join the team.** Please [email Gene](mailto:ekatsevi@wharton.upenn.edu) if you are interested.
+ --->
 
 <br/>
 We are grateful for funding from the [National Science Foundation](https://www.nsf.gov/) and [Analytics at Wharton](https://analytics.wharton.upenn.edu/).
