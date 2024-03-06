@@ -1,30 +1,33 @@
 - name: <a href="https://ekatsevi.github.io/">Eugene Katsevich</a>
   photo: Eugene_Katsevich_square.jpg
-  info: Assistant professor, started summer 2020
-  email: ekatsevi@wharton.upenn.edu
-  number_educ: 0
-  education1: 
+  position: Assistant professor at UPenn
+  role: Principal Investigator (Summer 2020 - present)
 
 - name: <a href="https://ziangniu6.github.io/">Ziang Niu</a>
   photo: ziang-niu.jpeg
-  info: Statistics PhD student at UPenn, co-advised with Bhaswar Bhattacharya, started spring 2022
-  email: ziangniu@upenn.edu
-  number_educ: 0
-  education1: 
+  position: Statistics PhD student at UPenn 
+  role: Lab Member (co-advised with Bhaswar Bhattacharya; Spring 2022 - present) 
   
 - name: <a href="https://www.jld-stats.com/">Joseph Deutsch</a>
   photo: joseph-deutsch.jpeg
-  info: Statistics PhD student at UPenn, started summer 2023
-  email: 
-  number_educ: 0
-  education1: 
+  position: Statistics PhD student at UPenn
+  role: Lab Member (Summer 2023 - present)
+
+- name: Abhinav Chakraborty
+  photo: abhinav-chakraborty.jpeg
+  position: Statistics PhD student at UPenn
+  role: Collaborator (Fall 2021 - present)
+    
+- name: Jeff Zhang
+  photo: jeff-zhang.jpeg
+  position: Statistics PhD student at UPenn
+  role: Collaborator (Spring 2023 - present)
+
+- name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
+  photo: tim-barry.jpeg
+  position: Postdoc at Harvard Biostatistics with Xihong Lin
+  role: Alumnus (Spring 2020 - Fall 2023), Collaborator (Spring 2024 - present)
   
 # - name: "This could be you!"
 #  photo: smiley.png
 #  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
-#  email: ekatsevi@wharton.upenn.edu
-#  number_educ: 0
-#  education1:
-#  education2:
-  education3:
-  education4:
