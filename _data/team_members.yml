@@ -4,42 +4,14 @@
   email: ekatsevi@wharton.upenn.edu
   number_educ: 0
   education1: 
-  
-- name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
-  photo: tim-barry.jpeg
-  info: Statistics PhD student at CMU, started spring 2020
-  email: tbarry2@andrew.cmu.edu
-  number_educ: 0
-  education1:
-  
-- name: Abhinav Chakraborty
-  photo: abhinav-chakraborty.jpeg
-  info: Statistics PhD student at UPenn, started fall 2021
-  email: abch@wharton.upenn.edu
-  number_educ: 0
-  education1: 
-  
+
 - name: <a href="https://ziangniu6.github.io/">Ziang Niu</a>
   photo: ziang-niu.jpeg
-  info: Statistics PhD student at UPenn, started spring 2022
+  info: Statistics PhD student at UPenn, co-advised with Bhaswar Bhattacharya, started spring 2022
   email: ziangniu@upenn.edu
   number_educ: 0
   education1: 
   
-- name: Kaishu Mason
-  photo: kaishu-mason.jpeg
-  info: Statistics PhD student at UPenn, started spring 2023
-  email: 
-  number_educ: 0
-  education1: 
-    
-- name: Jeff Zhang
-  photo: jeff-zhang.jpeg
-  info: Statistics PhD student at UPenn, started spring 2023
-  email: 
-  number_educ: 0
-  education1: 
-
 - name: <a href="https://www.jld-stats.com/">Joseph Deutsch</a>
   photo: joseph-deutsch.jpeg
   info: Statistics PhD student at UPenn, started summer 2023
