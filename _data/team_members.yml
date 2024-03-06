@@ -1,32 +1,32 @@
 - name: <a href="https://ekatsevi.github.io/">Eugene Katsevich</a>
   photo: Eugene_Katsevich_square.jpg
   position: Assistant professor at UPenn
-  role: Principal Investigator (Summer 2020 - present)
+  role: <i>PI</i> (Summer 2020 - present)
 
 - name: <a href="https://ziangniu6.github.io/">Ziang Niu</a>
   photo: ziang-niu.jpeg
   position: Statistics PhD student at UPenn 
-  role: Lab Member (co-advised with Bhaswar Bhattacharya; Spring 2022 - present) 
+  role: <i>Lab Member</i> (Spring 2022 - present) 
   
 - name: <a href="https://www.jld-stats.com/">Joseph Deutsch</a>
   photo: joseph-deutsch.jpeg
   position: Statistics PhD student at UPenn
-  role: Lab Member (Summer 2023 - present)
+  role: <i>Lab Member</i> (Summer 2023 - present)
 
 - name: Abhinav Chakraborty
   photo: abhinav-chakraborty.jpeg
   position: Statistics PhD student at UPenn
-  role: Collaborator (Fall 2021 - present)
+  role: </i>Collaborator</i> (Fall 2021 - present)
     
 - name: Jeff Zhang
   photo: jeff-zhang.jpeg
   position: Statistics PhD student at UPenn
-  role: Collaborator (Spring 2023 - present)
+  role: </i>Collaborator</i> (Spring 2023 - present)
 
 - name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
   photo: tim-barry.jpeg
-  position: Postdoc at Harvard Biostatistics with Xihong Lin
-  role: Alumnus (Spring 2020 - Fall 2023), Collaborator (Spring 2024 - present)
+  position: Postdoc at Harvard Biostatistics
+  role: </i>Collaborator</i> (Spring 2024 - present)
   
 # - name: "This could be you!"
 #  photo: smiley.png
