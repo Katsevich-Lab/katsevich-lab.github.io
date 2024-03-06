@@ -1,0 +1,37 @@
+- name: Abhinav Chakraborty
+  photo: abhinav-chakraborty.jpeg
+  info: Statistics PhD student at UPenn, started fall 2021
+  email: abch@wharton.upenn.edu
+  number_educ: 0
+  education1: 
+  
+- name: Kaishu Mason
+  photo: kaishu-mason.jpeg
+  info: Statistics PhD student at UPenn, started spring 2023
+  email: 
+  number_educ: 0
+  education1: 
+    
+- name: Jeff Zhang
+  photo: jeff-zhang.jpeg
+  info: Statistics PhD student at UPenn, started spring 2023
+  email: 
+  number_educ: 0
+  education1: 
+
+- name: <a href="https://www.jld-stats.com/">Joseph Deutsch</a>
+  photo: joseph-deutsch.jpeg
+  info: Statistics PhD student at UPenn, started summer 2023
+  email: 
+  number_educ: 0
+  education1: 
+  
+# - name: "This could be you!"
+#  photo: smiley.png
+#  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
+#  email: ekatsevi@wharton.upenn.edu
+#  number_educ: 0
+#  education1:
+#  education2:
+  education3:
+  education4:
