@@ -20,7 +20,7 @@ Statistics
 
 Genetics and genomics
 -======
-
+- P. J. Law, J. Smith, J. Vijayakrishnan, T. Barry, D. Chubb, B. Kinnersley, M. Mandelia, A. J. Cornish, E. Katsevich, R. S. Houlston. *Identification of enhancer-gene regulatory interactions in colorectal cancer identified through genome-wide CRISPRi perturbations.* Preprint.
 - M. Conery, J. A. Pippin, Y. Wagley, K. Trang, M. C. Pahl, D. A. Villani, L. J. Favazzo, C. L. Ackert-Bicknell, M. J. Zuscik, E. Katsevich, A. D. Wells, B. S. Zemel, B. F. Voight, K. D. Hankenson, A. Chesi, S. F. A. Grant. *Bioinformatics and single-cell CRISPRi screen reveal effector genes and implicate multi-tissue etiology for bone mineral density.* Preprint.
 - R. E. Yan, A. Corman, Z. Z. Gajic, R. Sam, M. Farid, I. Raimondi, S. Ganesan, E. Katsevich, N. Dahmane, J. P. Greenfield, and N. E. Sanjana. *Pooled CRISPR screens with joint single-cell chromatin accessibility and transcriptome profiling.* Preprint.
 - T. Barry, K. Mason, K. Roeder, E. Katsevich. *Robust differential expression testing for single-cell CRISPR screens at low multiplicity of infection.* Preprint. ([paper](https://doi.org/10.1101/2023.05.15.540875), [software](https://katsevich-lab.github.io/sceptre/), [reproduction code](https://github.com/Katsevich-Lab/sceptre2-manuscript))
