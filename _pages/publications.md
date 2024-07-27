@@ -9,6 +9,8 @@ permalink: /publications/
 Statistics
 -======
 
+- Z. Niu, J. Ray Choudhury, E. Katsevich. Computationally efficient and statistically accurate conditional independence testing with spaCRT. Preprint. ([paper](https://arxiv.org/abs/2407.08911))
+- Z. Niu, J. Ray Choudhury, E. Katsevich. The saddlepoint approximation for averages of conditionally independent random variables. Preprint. ([paper](https://arxiv.org/abs/2407.08915))
 - Z. Niu\*, A. Chakraborty\*, O. Dukes, E. Katsevich. *Reconciling model-X and doubly robust approaches to conditional independence testing*. Annals of Statistics, to appear, 2024+. ([paper](https://arxiv.org/abs/2211.14698), [code](https://github.com/Katsevich-Lab/symcrt-manuscript))
 - T. Barry, E. Katsevich, K. Roeder. *Exponential family measurement error models for single-cell CRISPR screens*. Biostatistics, 2024. ([paper](https://doi.org/10.1093/biostatistics/kxae010), [code](https://github.com/timothy-barry/glmeiv-manuscript), [results](https://upenn.box.com/v/glmeiv-files-v1))
 - J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Scandinavian Journal of Statistics, 2022. ([paper](https://doi.org/10.1111/sjos.12614))
