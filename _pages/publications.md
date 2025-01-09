@@ -9,7 +9,8 @@ permalink: /publications/
 Statistics
 -======
 
-- A. Chakraborty\* , J. Zhang\*, and Eugene Katsevich. Doubly robust and computationally efficient high-dimensional variable selection. Preprint. ([paper](https://arxiv.org/abs/2409.09512), [code](https://github.com/Katsevich-Lab/symcrt2-manuscript))
+- T. Barry, Z. Niu, E. Katsevich, X. Lin. The permuted score test for robust differential expression analysis. Preprint. ([paper](https://arxiv.org/abs/2501.03530))
+- A. Chakraborty\* , J. Zhang\*, and E. Katsevich. Doubly robust and computationally efficient high-dimensional variable selection. Preprint. ([paper](https://arxiv.org/abs/2409.09512), [code](https://github.com/Katsevich-Lab/symcrt2-manuscript))
 - Z. Niu, J. Ray Choudhury, E. Katsevich. Computationally efficient and statistically accurate conditional independence testing with spaCRT. Preprint. ([paper](https://arxiv.org/abs/2407.08911), [code](https://github.com/Katsevich-Lab/spacrt-manuscript))
 - Z. Niu, J. Ray Choudhury, E. Katsevich. The saddlepoint approximation for averages of conditionally independent random variables. Preprint. ([paper](https://arxiv.org/abs/2407.08915))
 - Z. Niu\*, A. Chakraborty\*, O. Dukes, E. Katsevich. *Reconciling model-X and doubly robust approaches to conditional independence testing*. Annals of Statistics, 2024. ([paper](https://arxiv.org/abs/2211.14698), [code](https://github.com/Katsevich-Lab/symcrt-manuscript))
