@@ -8,11 +8,10 @@ permalink: /publications/
 
 Statistics
 -======
-
-- L. Deutsch and E. Katsevich. Location tests with noisy proxies for latent variables. Preprint. ([paper](https://arxiv.org/abs/2507.19696), [code](https://github.com/Katsevich-Lab/noisy-proxies))
 - T. Barry, Z. Niu, E. Katsevich, X. Lin. The permuted score test for robust differential expression analysis. Preprint. ([paper](https://arxiv.org/abs/2501.03530))
 - A. Chakraborty\* , J. Zhang\*, and E. Katsevich. Doubly robust and computationally efficient high-dimensional variable selection. Preprint. ([paper](https://arxiv.org/abs/2409.09512), [code](https://github.com/Katsevich-Lab/symcrt2-manuscript))
 - Z. Niu, J. Ray Choudhury, E. Katsevich. The conditional saddlepoint approximation for fast and accurate large-scale hypothesis testing. Preprint. ([paper](https://arxiv.org/abs/2407.08911), [code](https://github.com/Katsevich-Lab/spacrt-manuscript))
+- L. Deutsch and E. Katsevich. Location tests with noisy proxies for latent variables. Statistics and Probability Letters, 2025. ([paper](https://www.sciencedirect.com/science/article/pii/S0167715225002354), [code](https://github.com/Katsevich-Lab/noisy-proxies))
 - Z. Niu\*, A. Chakraborty\*, O. Dukes, E. Katsevich. *Reconciling model-X and doubly robust approaches to conditional independence testing*. Annals of Statistics, 2024. ([paper](https://arxiv.org/abs/2211.14698), [code](https://github.com/Katsevich-Lab/symcrt-manuscript))
 - T. Barry, E. Katsevich, K. Roeder. *Exponential family measurement error models for single-cell CRISPR screens*. Biostatistics, 2024. ([paper](https://doi.org/10.1093/biostatistics/kxae010), [code](https://github.com/timothy-barry/glmeiv-manuscript), [results](https://upenn.box.com/v/glmeiv-files-v1))
 - J. Tian, X. Chen, E. Katsevich, J. Goeman, A. Ramdas. *Large-scale simultaneous inference under dependence*. Scandinavian Journal of Statistics, 2022. ([paper](https://doi.org/10.1111/sjos.12614))
