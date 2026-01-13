@@ -8,6 +8,7 @@ permalink: /publications/
 
 Statistics
 -======
+- A. Chakraborty, J. Lee, E. Katsevich. Comparing three learn-then-test paradigms in a multivariate normal means problem. Preprint. ([paper](https://arxiv.org/abs/2601.07764))
 - T. Barry, Z. Niu, E. Katsevich, X. Lin. The permuted score test for robust differential expression analysis. Preprint. ([paper](https://arxiv.org/abs/2501.03530))
 - A. Chakraborty\* , J. Zhang\*, and E. Katsevich. Doubly robust and computationally efficient high-dimensional variable selection. Preprint. ([paper](https://arxiv.org/abs/2409.09512), [code](https://github.com/Katsevich-Lab/symcrt2-manuscript))
 - Z. Niu, J. Ray Choudhury, E. Katsevich. The conditional saddlepoint approximation for fast and accurate large-scale hypothesis testing. Preprint. ([paper](https://arxiv.org/abs/2407.08911), [code](https://github.com/Katsevich-Lab/spacrt-manuscript))
