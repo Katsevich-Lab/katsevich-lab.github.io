@@ -8,7 +8,6 @@ permalink: /publications/
 
 Statistics
 -======
-- Z. Niu, Y. He, J. Galante, A. Gschwind, J. Engreitz, E. Katsevich. An analytical framework for designing Perturb-seq experiments. Preprint. ([paper](https://doi.org/10.64898/2026.05.22.727199), [web app](http://perturbplan.com/))
 - A. Chakraborty, J. Lee, E. Katsevich. Power of masking methods for adaptive testing in a multivariate normal means problem. Preprint. ([paper](https://arxiv.org/abs/2601.07764))
 - T. Barry, Z. Niu, E. Katsevich, X. Lin. The permuted score test for robust differential expression analysis. Preprint. ([paper](https://arxiv.org/abs/2501.03530))
 - A. Chakraborty\* , J. Zhang\*, and E. Katsevich. Doubly robust and computationally efficient high-dimensional variable selection. Preprint. ([paper](https://arxiv.org/abs/2409.09512), [code](https://github.com/Katsevich-Lab/symcrt2-manuscript))
@@ -25,6 +24,7 @@ Statistics
 
 Genetics and genomics
 -======
+- Z. Niu, Y. He, J. Galante, A. Gschwind, J. Engreitz, E. Katsevich. An analytical framework for designing Perturb-seq experiments. Preprint. ([paper](https://doi.org/10.64898/2026.05.22.727199), [web app](http://perturbplan.com/))
 - J. Ray, E. Jagoda, M. U. Sheth, J. Galante, D. Amgalan, A. R. Gschwind, C. J. Munger, J. Huang, G. Munson, M. Murphy, E. Mattei, T. Barry, V. Singh, A. Baskaran, H. Kang, E. Katsevich, L. M. Steinmetz, and J. Engreitz. An unbiased survey of distal element-gene regulatory interactions with direct-capture targeted Perturb-seq. Preprint. ([paper](https://www.biorxiv.org/content/10.1101/2025.09.16.676677v1))
 - P. J. Law, J. Smith, J. Vijayakrishnan, T. Barry, D. Chubb, B. Kinnersley, M. Mandelia, A. J. Cornish, E. Katsevich, R. S. Houlston. *Identification of enhancer-gene regulatory interactions in colorectal cancer identified through genome-wide CRISPRi perturbations.* Preprint.
 - M. Conery, J. A. Pippin, Y. Wagley, K. Trang, M. C. Pahl, D. A. Villani, L. J. Favazzo, C. L. Ackert-Bicknell, M. J. Zuscik, E. Katsevich, A. D. Wells, B. S. Zemel, B. F. Voight, K. D. Hankenson, A. Chesi, S. F. A. Grant. *GWAS-informed data integration and non-coding CRISPRi screen illuminate genetic etiology of bone mineral density.* Genome Biology, 2025. ([paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03802-4))
