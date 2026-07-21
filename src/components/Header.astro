@@ -1,0 +1,79 @@
+---
+import { navItems } from "../data/site";
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Katsevich Lab home">
+      <span class="brand-mark" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </span>
+      <span class="brand-copy">
+        <strong>Katsevich Lab</strong>
+        <small>Statistics · University of Pennsylvania</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <ul>
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary role="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </summary>
+      <nav id="mobile-navigation" aria-label="Mobile navigation">
+        <ul>
+          {navItems.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
+                {item.label}<span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
+  if (menu) {
+    const summary = menu.querySelector<HTMLElement>("summary");
+    const syncMenuState = () => {
+      summary?.setAttribute("aria-expanded", String(menu.open));
+      summary?.setAttribute("aria-label", menu.open ? "Close navigation" : "Open navigation");
+    };
+    new MutationObserver(syncMenuState).observe(menu, { attributes: true, attributeFilter: ["open"] });
+    menu.addEventListener("toggle", syncMenuState);
+    syncMenuState();
+    menu.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => menu.removeAttribute("open"))
+    );
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.open) {
+        menu.removeAttribute("open");
+        summary?.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (menu.open && !menu.contains(event.target as Node)) menu.removeAttribute("open");
+    });
+  }
+</script>

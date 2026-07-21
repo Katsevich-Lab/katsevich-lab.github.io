@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import type { Person } from "../data/site";
+
+interface Props {
+  person: Person;
+  compact?: boolean;
+}
+
+const { person, compact = false } = Astro.props;
+---
+
+<article class:list={["person-card", compact && "person-card--compact"]}>
+  <div class="person-image" aria-hidden="true" style={`--image-position: ${person.imagePosition ?? "center 28%"}`}>
+    {person.image ? (
+      <Image src={person.image} alt="" width={520} height={650} loading="lazy" />
+    ) : (
+      <span>{person.initials ?? person.name.split(" ").map((part) => part[0]).join("")}</span>
+    )}
+  </div>
+  <div class="person-content">
+    <p class="person-role">{person.role}</p>
+    <h3>{person.name}</h3>
+    {person.affiliation && <p class="person-affiliation">{person.affiliation}</p>}
+    <p class="person-description">{person.description}</p>
+    <ul class="tag-list" aria-label={`${person.name} research themes`}>
+      {person.themes.map((theme) => <li>{theme}</li>)}
+    </ul>
+    {person.note && <p class="person-note">{person.note}</p>}
+    {person.links && (
+      <div class="text-links">
+        {person.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+      </div>
+    )}
+  </div>
+</article>

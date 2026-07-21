@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SoftwareCard from "../components/SoftwareCard.astro";
+import { software, secondarySoftware } from "../data/site";
+
+const description =
+  "Use open-source software from the Katsevich Lab for single-cell CRISPR analysis, Perturb-seq experimental design, and scalable statistical research.";
+---
+
+<BaseLayout title="Software" description={description}>
+  <header class="page-hero page-hero--software">
+    <div class="shell page-title-grid">
+      <div>
+        <p class="eyebrow">Open software</p>
+        <h1>Methods built to <em>be used.</em></h1>
+      </div>
+      <p class="page-lede">Our software turns statistical ideas into documented, reproducible workflows for experimental design and analysis. Source code is public and every flagship tool connects back to the evidence behind it.</p>
+    </div>
+  </header>
+
+  <section class="section software-page-section">
+    <div class="shell">
+      <div class="people-section-heading"><p class="eyebrow">Flagship tools</p><h2>Start here</h2></div>
+      <div class="software-feature-grid">
+        {software.map((item) => <SoftwareCard item={item} featured />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section software-secondary-section">
+    <div class="shell">
+      <div class="people-section-heading people-section-heading--split">
+        <div><p class="eyebrow">Research ecosystem</p><h2>Packages & reproducible code</h2></div>
+        <p>Status labels distinguish maintained software from research implementations tied to a specific method or manuscript.</p>
+      </div>
+      <div class="software-secondary-grid">
+        {secondarySoftware.map((item) => <SoftwareCard item={item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="software-principles">
+    <div class="shell software-principles-grid">
+      <div><p class="eyebrow">How we build</p><h2>Rigor is a product requirement.</h2></div>
+      <ol>
+        <li><span>01</span><strong>Statistically grounded</strong><p>Software behavior follows the inferential assumptions and diagnostics, not just the fastest implementation.</p></li>
+        <li><span>02</span><strong>Reproducible by default</strong><p>Public source, versioned workflows, and manuscript code make results inspectable.</p></li>
+        <li><span>03</span><strong>Designed for real screens</strong><p>Scalability, clear diagnostics, and biological workflows shape the interface from the start.</p></li>
+      </ol>
+    </div>
+  </section>
+</BaseLayout>

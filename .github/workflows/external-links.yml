@@ -1,0 +1,32 @@
+name: Check external links
+
+on:
+  schedule:
+    - cron: "17 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - name: Build website
+        run: npm ci && npm run build
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --max-retries 3
+            --accept 200,204,206,429
+            'dist/**/*.html'

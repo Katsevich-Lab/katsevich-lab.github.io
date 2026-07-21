@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const description =
+  "How to connect with the Katsevich Lab, including Penn doctoral admissions, research collaborations, and contact information.";
+---
+
+<BaseLayout title="Join and contact" description={description}>
+  <header class="page-hero page-hero--join">
+    <div class="shell page-title-grid">
+      <div>
+        <p class="eyebrow">Join / contact</p>
+        <h1>Start with the <em>research question.</em></h1>
+      </div>
+      <p class="page-lede">We are interested in collaborations where a new biological measurement creates a real statistical challenge—and in training researchers who want to work across theory, software, and genomics.</p>
+    </div>
+  </header>
+
+  <section class="section join-section">
+    <div class="shell join-grid">
+      <article class="join-card join-card--primary">
+        <p class="join-number">01</p>
+        <h2>Prospective doctoral students</h2>
+        <p>Doctoral admissions are managed by Penn’s graduate programs rather than by individual laboratories. Apply directly to the program that best matches your preparation and interests.</p>
+        <ul class="join-link-list">
+          <li><a href="https://statistics.wharton.upenn.edu/programs/phd/">Statistics and Data Science PhD <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.amcs.upenn.edu/graduate/">Applied Mathematics and Computational Science <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.med.upenn.edu/gcb/graduate-program.html">Genomics and Computational Biology <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </article>
+      <article class="join-card">
+        <p class="join-number">02</p>
+        <h2>Research collaborations</h2>
+        <p>We welcome conversations about perturbational genomics, statistical calibration, experimental design, and high-dimensional inference when there is a concrete scientific or methodological question to explore.</p>
+        <p class="join-note">A useful first note briefly describes the question, the data or experimental setting, and why our methods may be relevant.</p>
+      </article>
+      <article class="join-card">
+        <p class="join-number">03</p>
+        <h2>Current openings</h2>
+        <p>There are no specific funded positions advertised on this site at present. Prospective doctoral students should use the official admissions routes above.</p>
+        <p class="join-note">For other research inquiries, please use the contact information below.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-panel">
+    <div class="shell contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Katsevich Lab<br />University of Pennsylvania</h2>
+      </div>
+      <div>
+        <p class="contact-label">Email</p>
+        <a class="contact-value" href="mailto:ekatsevi@wharton.upenn.edu">ekatsevi@wharton.upenn.edu</a>
+      </div>
+      <div>
+        <p class="contact-label">Visit</p>
+        <address class="contact-value">311 Academic Research Building<br />265 South 37th Street<br />Philadelphia, PA 19104-1686</address>
+        <a class="contact-map" href="https://maps.google.com/?q=265+South+37th+Street+Philadelphia+PA+19104">Open in maps <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ResearchVisual from "../components/ResearchVisual.astro";
+import { researchPillars } from "../data/site";
+
+const description =
+  "Explore the Katsevich Lab research program in single-cell CRISPR analysis, perturbational experiment design, and high-dimensional statistical inference.";
+---
+
+<BaseLayout title="Research" description={description}>
+  <header class="page-hero page-hero--research">
+    <div class="shell page-hero-grid">
+      <div>
+        <p class="eyebrow">Research program</p>
+        <h1>From perturbation to <em>reliable evidence.</em></h1>
+        <p class="page-lede">
+          Modern genomic screens can perturb thousands of targets and measure millions of cellular responses. We develop the statistical ideas and software needed to design these experiments, separate signal from artifact, and draw defensible conclusions.
+        </p>
+      </div>
+      <ResearchVisual />
+    </div>
+  </header>
+
+  <div class="research-toc">
+    <div class="shell">
+      <p>Explore the program</p>
+      {researchPillars.map((pillar) => <a href={`#pillar-${pillar.number}`}><span>{pillar.number}</span>{pillar.title}</a>)}
+    </div>
+  </div>
+
+  <section class="research-pillars-long">
+    {researchPillars.map((pillar, index) => (
+      <article id={`pillar-${pillar.number}`} class:list={["research-pillar-long", `accent-${pillar.accent}`]}>
+        <div class="shell research-pillar-grid">
+          <div class="research-pillar-heading">
+            <p class="eyebrow">Pillar {pillar.number}</p>
+            <h2>{pillar.title}</h2>
+            <p class="pillar-question">{pillar.question}</p>
+          </div>
+          <div class="research-pillar-body">
+            <p class="large-copy">{pillar.description}</p>
+            <div class="research-detail-grid">
+              <div>
+                <h3>Selected work</h3>
+                <ul class="arrow-list">
+                  {pillar.work.map((work) => <li>{work}</li>)}
+                </ul>
+              </div>
+              <div>
+                <h3>{index === 0 ? "Why it matters" : index === 1 ? "Design decisions" : "Statistical ideas"}</h3>
+                <p>
+                  {index === 0 && "Small modeling or quality-control failures can create convincing false signals. Calibration turns scale into trustworthy discovery."}
+                  {index === 1 && "Cells, guides, sequencing depth, effect sizes, and multiplicity interact. Good design makes those tradeoffs visible before resources are committed."}
+                  {index === 2 && "Accurate tail probabilities and robust tests are essential when many weak signals, complex dependence, and imperfect models meet."}
+                </p>
+              </div>
+            </div>
+            <div class="button-row button-row--compact">
+              {index === 0 && <><a class="button button--dark" href="https://katsevich-lab.github.io/sceptre/">Use sceptre <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?area=Genomics">Related papers <span aria-hidden="true">→</span></a></>}
+              {index === 1 && <><a class="button button--dark" href="https://perturbplan.com/">Launch PerturbPlan <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="https://doi.org/10.64898/2026.05.22.727199">Read the preprint <span aria-hidden="true">↗</span></a></>}
+              {index === 2 && <><a class="button button--dark" href="https://arxiv.org/abs/2407.08911">Read about spaCRT <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?area=Statistics">Related papers <span aria-hidden="true">→</span></a></>}
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="section heading-forward">
+    <div class="shell forward-grid">
+      <div>
+        <p class="eyebrow">Where we are headed</p>
+        <h2>New measurements, same demand for rigor.</h2>
+      </div>
+      <div>
+        <p class="large-copy">
+          Perturbational genomics is moving toward larger screens and richer spatial and multimodal readouts. We are extending our foundations for calibration, power analysis, and scalable computation to meet those experiments.
+        </p>
+        <p>
+          The goal is not complexity for its own sake: it is to make increasingly ambitious experiments interpretable, reproducible, and useful.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="open-science-callout">
+    <div class="shell open-science-grid">
+      <p class="eyebrow">Cross-cutting principle</p>
+      <h2>Open methods.<br />Reproducible evidence.</h2>
+      <p>We pair methodology with documented software, public code, and reproducible analysis workflows so that statistical guarantees can survive contact with real data.</p>
+      <a class="button button--light" href="/software/">Explore the software <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</BaseLayout>

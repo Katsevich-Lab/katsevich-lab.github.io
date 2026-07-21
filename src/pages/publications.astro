@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { publications, featuredPublications } from "../data/site";
+
+const description =
+  "Browse Katsevich Lab publications in statistical genomics, high-dimensional inference, perturbational experiment design, and computational imaging.";
+const areas = ["All", "Genomics", "Statistics", "Imaging"];
+const statuses = ["All", "Working manuscript", "Under review", "Published"];
+---
+
+<BaseLayout title="Publications" description={description}>
+  <header class="page-hero page-hero--publications">
+    <div class="shell page-title-grid">
+      <div>
+        <p class="eyebrow">Publications</p>
+        <h1>Ideas, evidence, and <em>open outputs.</em></h1>
+      </div>
+      <p class="page-lede">Our work spans statistical genomics, high-dimensional inference, experimental design, and computational imaging. Links connect papers to software and reproducible code where available.</p>
+    </div>
+  </header>
+
+  <section class="section featured-publications-section">
+    <div class="shell">
+      <div class="people-section-heading"><p class="eyebrow">Featured work</p><h2>A few places to begin</h2></div>
+      <div class="publication-feature-grid">
+        {featuredPublications.map((paper, index) => (
+          <article class="publication-feature-card">
+            <div class="publication-feature-meta"><span>0{index + 1}</span><span>{paper.year} · {paper.status}</span></div>
+            <h3>{paper.title}</h3>
+            <p class="publication-authors">{paper.authors}</p>
+            <p>{paper.takeaway}</p>
+            <div class="text-links">
+              {paper.links?.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section publication-index-section">
+    <div class="shell">
+      <div class="publication-index-heading">
+        <div><p class="eyebrow">Publication list</p><h2>All {publications.length} works</h2></div>
+        <p id="publication-count" aria-live="polite">Showing all {publications.length} works</p>
+      </div>
+
+      <div class="publication-controls" aria-label="Publication filters">
+        <fieldset>
+          <legend>Research area</legend>
+          <div class="filter-row" data-filter-group="area">
+            {areas.map((area, index) => <button type="button" data-value={area} aria-pressed={index === 0 ? "true" : "false"}>{area}</button>)}
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Status</legend>
+          <div class="filter-row" data-filter-group="status">
+            {statuses.map((status, index) => <button type="button" data-value={status} aria-pressed={index === 0 ? "true" : "false"}>{status}</button>)}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="publication-list" id="publication-list" data-publication-total={publications.length}>
+        {publications.map((paper, index) => (
+          <article class="publication-item" data-area={paper.area} data-status={paper.status}>
+            <div class="publication-number">{String(publications.length - index).padStart(2, "0")}</div>
+            <div>
+              <div class="publication-meta"><span>{paper.year}</span><span>{paper.area}</span><span>{paper.status}</span></div>
+              <h3>{paper.title}</h3>
+              <p class="publication-authors">{paper.authors}</p>
+              <p class="publication-venue">{paper.venue}</p>
+              {paper.links && (
+                <div class="text-links">
+                  {paper.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+      <p id="publication-empty" class="publication-empty" hidden>No publications match these filters.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const groups = document.querySelectorAll<HTMLElement>("[data-filter-group]");
+  const items = [...document.querySelectorAll<HTMLElement>(".publication-item")];
+  const count = document.querySelector<HTMLElement>("#publication-count");
+  const empty = document.querySelector<HTMLElement>("#publication-empty");
+  const state = { area: "All", status: "All" };
+
+  const update = () => {
+    let visible = 0;
+    items.forEach((item) => {
+      const show =
+        (state.area === "All" || item.dataset.area === state.area) &&
+        (state.status === "All" || item.dataset.status === state.status);
+      item.hidden = !show;
+      if (show) visible += 1;
+    });
+    if (count) count.textContent = visible === items.length ? `Showing all ${visible} works` : `Showing ${visible} of ${items.length} works`;
+    if (empty) empty.hidden = visible !== 0;
+
+    const params = new URLSearchParams();
+    if (state.area !== "All") params.set("area", state.area);
+    if (state.status !== "All") params.set("status", state.status);
+    history.replaceState(null, "", params.size ? `${location.pathname}?${params}` : location.pathname);
+  };
+
+  const params = new URLSearchParams(location.search);
+  (["area", "status"] as const).forEach((key) => {
+    const value = params.get(key);
+    const group = document.querySelector<HTMLElement>(`[data-filter-group="${key}"]`);
+    const button = group?.querySelector<HTMLButtonElement>(`button[data-value="${CSS.escape(value ?? "")}"]`);
+    if (value && button) {
+      state[key] = value;
+      group?.querySelectorAll("button").forEach((candidate) => candidate.setAttribute("aria-pressed", "false"));
+      button.setAttribute("aria-pressed", "true");
+    }
+  });
+
+  groups.forEach((group) => {
+    group.addEventListener("click", (event) => {
+      const button = (event.target as Element).closest<HTMLButtonElement>("button[data-value]");
+      if (!button) return;
+      const key = group.dataset.filterGroup as "area" | "status";
+      state[key] = button.dataset.value ?? "All";
+      group.querySelectorAll("button").forEach((candidate) => candidate.setAttribute("aria-pressed", String(candidate === button)));
+      update();
+    });
+  });
+
+  update();
+</script>

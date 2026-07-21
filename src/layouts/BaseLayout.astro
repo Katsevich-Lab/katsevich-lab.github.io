@@ -1,0 +1,94 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+const pageTitle = title === "Katsevich Lab" ? title : `${title} — Katsevich Lab`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL("/og.png", Astro.site);
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  name: "Katsevich Lab",
+  url: Astro.site?.toString(),
+  description:
+    "A University of Pennsylvania research group developing statistical methods and software for perturbational genomics.",
+  parentOrganization: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Pennsylvania",
+    url: "https://www.upenn.edu/"
+  },
+  founder: {
+    "@type": "Person",
+    name: "Eugene Katsevich",
+    jobTitle: "Assistant Professor of Statistics and Data Science",
+    url: "https://ekatsevi.github.io/"
+  },
+  email: "mailto:ekatsevi@wharton.upenn.edu",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "311 Academic Research Building, 265 South 37th Street",
+    addressLocality: "Philadelphia",
+    addressRegion: "PA",
+    postalCode: "19104-1686",
+    addressCountry: "US"
+  },
+  sameAs: [
+    "https://github.com/Katsevich-Lab",
+    "https://statistics.wharton.upenn.edu/profile/ekatsevi/"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#102a43" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {!noindex && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Katsevich Lab" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {!noindex && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Katsevich Lab — statistical methods and software for perturbational genomics" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <Header />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const skipLink = document.querySelector<HTMLAnchorElement>(".skip-link");
+      const mainContent = document.querySelector<HTMLElement>("#main-content");
+      skipLink?.addEventListener("click", () => requestAnimationFrame(() => mainContent?.focus()));
+    </script>
+  </body>
+</html>

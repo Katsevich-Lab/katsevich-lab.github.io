@@ -1,0 +1,28 @@
+---
+interface Props {
+  destination: string;
+  label: string;
+}
+
+const { destination, label } = Astro.props;
+const absoluteDestination = new URL(destination, Astro.site);
+Astro.response.headers.set("X-Robots-Tag", "noindex");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Page moved — Katsevich Lab</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={absoluteDestination} />
+  </head>
+  <body>
+    <main>
+      <h1>This page has moved</h1>
+      <p>Continue to <a href={destination}>{label}</a>.</p>
+    </main>
+  </body>
+</html>

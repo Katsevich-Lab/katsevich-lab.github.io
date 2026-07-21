@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import type { SoftwareItem } from "../data/site";
+
+interface Props {
+  item: SoftwareItem;
+  featured?: boolean;
+}
+
+const { item, featured = false } = Astro.props;
+---
+
+<article class:list={["software-card", featured && "software-card--featured", item.accent && `accent-${item.accent}`]}>
+  <div class="software-topline">
+    <p class="software-status">{item.label}</p>
+    {item.logo && (
+      <div class="software-logo" aria-hidden="true">
+        <Image src={item.logo} alt="" width={180} height={210} loading="lazy" />
+      </div>
+    )}
+  </div>
+  <h3>{item.name}</h3>
+  <p class="software-description">{item.description}</p>
+  {item.detail && <p class="software-detail">{item.detail}</p>}
+  <ul class="tag-list" aria-label={`${item.name} attributes`}>
+    {item.tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+  <div class="button-row button-row--compact">
+    {item.links.map((link, index) => (
+      <a class:list={["button", index === 0 ? "button--dark" : "button--quiet"]} href={link.href}>
+        {link.label}<span aria-hidden="true"> ↗</span>
+      </a>
+    ))}
+  </div>
+</article>

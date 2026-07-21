@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import ResearchVisual from "../components/ResearchVisual.astro";
+import PersonCard from "../components/PersonCard.astro";
+import SoftwareCard from "../components/SoftwareCard.astro";
+import {
+  researchPillars,
+  software,
+  corePeople,
+  featuredPublications,
+  publications,
+  updates,
+  funding
+} from "../data/site";
+
+const description =
+  "The Katsevich Lab at Penn develops reliable, scalable statistical methods and software for learning how genomic perturbations change cells.";
+---
+
+<BaseLayout title="Katsevich Lab" description={description}>
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Statistical methods for perturbational genomics</p>
+        <h1>Learning how genomic perturbations <em>change cells.</em></h1>
+        <p class="hero-lede">
+          We develop reliable, scalable methods and software that turn complex single-cell experiments into defensible biological evidence.
+        </p>
+        <div class="button-row">
+          <a class="button button--primary" href="/research/">Explore our research <span aria-hidden="true">→</span></a>
+          <a class="button button--secondary" href="/software/">Use our software <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-affiliation">
+          <span class="mini-mark" aria-hidden="true"></span>
+          <p><strong>University of Pennsylvania</strong><br />Statistics and Data Science</p>
+        </div>
+      </div>
+      <div class="hero-art">
+        <ResearchVisual />
+        <p class="figure-caption"><span>01</span> From perturbations and cellular measurements to calibrated statistical evidence.</p>
+      </div>
+    </div>
+    <div class="shell hero-index" aria-label="Research focus areas">
+      {researchPillars.map((pillar) => (
+        <a href={`/research/#pillar-${pillar.number}`}>
+          <span>{pillar.number}</span>
+          <strong>{pillar.title}</strong>
+          <i aria-hidden="true">↗</i>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section research-preview">
+    <div class="shell">
+      <SectionHeader
+        eyebrow="Our research"
+        title="Rigorous methods for ambitious experiments."
+        text="We work across the experimental lifecycle: planning a perturbational study, extracting reliable signal, and making valid discoveries at scale."
+        align="split"
+      />
+      <div class="pillar-grid">
+        {researchPillars.map((pillar) => (
+          <article class:list={["pillar-card", `accent-${pillar.accent}`]}>
+            <div class="pillar-number">{pillar.number}</div>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.short}</p>
+            <ul>
+              {pillar.work.slice(0, 3).map((item) => <li>{item}</li>)}
+            </ul>
+            <a href={`/research/#pillar-${pillar.number}`} aria-label={`Learn about ${pillar.title}`}>
+              Follow the work <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section software-band">
+    <div class="shell">
+      <SectionHeader
+        eyebrow="Open software"
+        title="Methods built to be used."
+        text="Our software packages bring rigorous statistical ideas into practical, documented workflows for experimentalists and analysts."
+        align="split"
+      />
+      <div class="software-feature-grid">
+        {software.map((item) => <SoftwareCard item={item} featured />)}
+      </div>
+      <div class="section-link"><a href="/software/">Explore all software <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="section papers-preview">
+    <div class="shell">
+      <SectionHeader
+        eyebrow="Selected work"
+        title="New ideas, from theory to practice."
+        text="Recent work connects statistical guarantees to real decisions in perturbational genomics."
+        align="split"
+      />
+      <div class="featured-paper-list">
+        {featuredPublications.map((paper, index) => (
+          <article class="featured-paper">
+            <div class="paper-index">0{index + 1}</div>
+            <div class="paper-main">
+              <div class="paper-meta"><span>{paper.year}</span><span>{paper.venue}</span></div>
+              <h3>{paper.title}</h3>
+              <p>{paper.takeaway}</p>
+              <div class="text-links">
+                {paper.links?.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+              </div>
+            </div>
+            <div class:list={["paper-signal", `paper-signal--${index + 1}`]} aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="section-link"><a href="/publications/">View all {publications.length} works <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="section people-preview">
+    <div class="shell">
+      <SectionHeader
+        eyebrow="People"
+        title="A small lab with a collaborative reach."
+        text="We bring together statistical theory, computation, software engineering, and genomics through close collaborations across Penn and beyond."
+        align="split"
+      />
+      <div class="people-grid people-grid--home">
+        {corePeople.map((person) => <PersonCard person={person} compact />)}
+      </div>
+      <div class="section-link"><a href="/people/">Meet the lab and collaborators <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="section updates-section">
+    <div class="shell updates-grid">
+      <div>
+        <p class="eyebrow">Recent signals</p>
+        <h2>What we are working on now.</h2>
+      </div>
+      <div class="update-list">
+        {updates.map((update) => (
+          <a href={update.href} class="update-item">
+            <time>{update.date}</time>
+            <span><strong>{update.title}</strong>{update.text}</span>
+            <i aria-hidden="true">↗</i>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="support-section">
+    <div class="shell support-grid">
+      <div>
+        <p class="eyebrow">Support</p>
+        <h2>Current and past support</h2>
+      </div>
+      <div class="funding-current">
+        <p>Current</p>
+        {funding.current.map((item) => (
+          <a href={item.href}>
+            <strong>{item.funder}</strong>
+            <span>{item.award} · {item.period}</span>
+            <small>{item.name}</small>
+          </a>
+        ))}
+      </div>
+      <div class="funding-past">
+        <p>Past</p>
+        {funding.past.map((item) => (
+          <a href={item.href}>
+            <strong>{item.funder}</strong>
+            <span>{item.period}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

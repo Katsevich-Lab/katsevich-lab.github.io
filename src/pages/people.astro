@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PersonCard from "../components/PersonCard.astro";
+import { corePeople, collaborators } from "../data/site";
+
+const description =
+  "Meet the Katsevich Lab’s current members, mentored researchers, collaborators, and alumni at the University of Pennsylvania and beyond.";
+---
+
+<BaseLayout title="People" description={description}>
+  <header class="page-hero page-hero--plain">
+    <div class="shell page-title-grid">
+      <div>
+        <p class="eyebrow">People</p>
+        <h1>A small lab with a <em>collaborative reach.</em></h1>
+      </div>
+      <p class="page-lede">Our work brings together statistical theory, computation, software engineering, and genomics. We collaborate closely across Penn and with researchers around the world.</p>
+    </div>
+  </header>
+
+  <section class="section people-section people-section--core">
+    <div class="shell">
+      <div class="people-section-heading">
+        <p class="eyebrow">Current lab</p>
+        <h2>Core team</h2>
+      </div>
+      <div class="people-grid">
+        {corePeople.map((person) => <PersonCard person={person} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section people-section people-section--collaborators">
+    <div class="shell">
+      <div class="people-section-heading people-section-heading--split">
+        <div><p class="eyebrow">Extended community</p><h2>Collaborators & alumni</h2></div>
+        <p>Each person appears once, with relationship tags that reflect the many ways people contribute to the lab’s work.</p>
+      </div>
+      <div class="people-grid people-grid--collaborators">
+        {collaborators.map((person) => <PersonCard person={person} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="people-note">
+    <div class="shell people-note-grid">
+      <p class="eyebrow">Working together</p>
+      <h2>Good collaborations start with a clear question.</h2>
+      <p>We enjoy collaborations where new biological measurements create a genuine statistical challenge—and where methods, software, and scientific interpretation can develop together.</p>
+      <a class="button button--dark" href="/join/">Contact the lab <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</BaseLayout>

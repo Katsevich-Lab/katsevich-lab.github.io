@@ -1,0 +1,38 @@
+<div
+  class="research-visual"
+  role="img"
+  aria-label="A conceptual diagram showing guide RNA perturbations producing varied cellular responses, which are transformed into a count matrix and calibrated statistical evidence."
+>
+  <div class="visual-grid" aria-hidden="true"></div>
+  <div class="visual-label visual-label--input" aria-hidden="true">PERTURB</div>
+  <div class="visual-label visual-label--measure" aria-hidden="true">MEASURE</div>
+  <div class="visual-label visual-label--infer" aria-hidden="true">INFER</div>
+
+  <div class="guide-stack" aria-hidden="true">
+    <span>gRNA 01</span><span>gRNA 02</span><span>gRNA 03</span>
+  </div>
+
+  <div class="cell-field" aria-hidden="true">
+    <span class="cell cell--1"><i></i><b></b><em></em></span>
+    <span class="cell cell--2"><i></i><b></b><em></em></span>
+    <span class="cell cell--3"><i></i><b></b><em></em></span>
+    <span class="cell cell--4"><i></i><b></b><em></em></span>
+    <span class="cell cell--5"><i></i><b></b><em></em></span>
+  </div>
+
+  <div class="count-matrix" aria-hidden="true">
+    {Array.from({ length: 30 }).map((_, index) => <i style={`--n:${(index * 7) % 11}`}></i>)}
+  </div>
+
+  <div class="evidence-card" aria-hidden="true">
+    <div class="evidence-axis"></div>
+    <span class="interval interval--1"></span>
+    <span class="interval interval--2"></span>
+    <span class="interval interval--3"></span>
+    <strong>calibrated<br />evidence</strong>
+  </div>
+
+  <span class="flow flow--1" aria-hidden="true">→</span>
+  <span class="flow flow--2" aria-hidden="true">→</span>
+  <span class="flow flow--3" aria-hidden="true">→</span>
+</div>

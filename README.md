@@ -1,11 +1,31 @@
-# Allan Lab Website
+# Katsevich Lab website
 
-This is the website of our academic research group at Leiden University.
+The public website for the Katsevich Lab at the University of Pennsylvania.
 
-This website is powered by Jekyll and some Bootstrap, Bootwatch. We tried to make it simple yet adaptable, so that it is easy for you to use it as a template. Plese feel free to copy and modify for your own purposes.  You don't have to link to us or mention us (but of course we appreciate it).
+## Local development
 
-Go to *aboutwebsite.md*  to learn how to copy and modidy this page for your purpose. 
+Use Node 22 (the version recorded in `.nvmrc`), then install the locked dependency set:
 
+```sh
+npm ci
+npm run dev
+```
 
-Copyright Allan Lab. Code released under the MIT License.
+Astro prints the local URL when the development server starts.
 
+## Production build
+
+```sh
+npm test
+npm run preview
+```
+
+`npm test` runs Astro and TypeScript diagnostics, creates the static site, and verifies its routes and metadata. The site is deployed to GitHub Pages through `.github/workflows/deploy.yml` only from the `gh-pages` branch.
+
+## Updating content
+
+Public-facing people, research, software, funding, updates, and publication records live in `src/data/site.ts`. Images are imported from `images/teampic` and `images/softwarepic` so they are optimized during the build.
+
+## Legacy URLs
+
+The retired paths `/team/`, `/vacancies/`, `/allnews/`, `/pictures/`, `/aboutwebsite.html`, `/allnews.html`, and `/aoa.html` are part of the site's compatibility contract. Keep their noindex, follow-through redirect pages in place when changing routes; `npm test` verifies every destination.
