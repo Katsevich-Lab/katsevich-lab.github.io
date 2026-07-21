@@ -4,6 +4,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 import ResearchVisual from "../components/ResearchVisual.astro";
 import PersonCard from "../components/PersonCard.astro";
 import SoftwareCard from "../components/SoftwareCard.astro";
+import PublicationVisual from "../components/PublicationVisual.astro";
 import {
   researchPillars,
   software,
@@ -15,30 +16,30 @@ import {
 } from "../data/site";
 
 const description =
-  "The Katsevich Lab at Penn develops reliable, scalable statistical methods and software for learning how genomic perturbations change cells.";
+  "The Katsevich Lab at Penn develops statistical methods and software for Perturb-seq and reliable discovery in complex data.";
 ---
 
 <BaseLayout title="Katsevich Lab" description={description}>
   <section class="hero">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Statistical methods for perturbational genomics</p>
-        <h1>Learning how genomic perturbations <em>change cells.</em></h1>
+        <p class="eyebrow"><span></span> Perturb-seq · Statistics for reliable discovery</p>
+        <h1>Turning complex data into <em>reliable discoveries.</em></h1>
         <p class="hero-lede">
-          We develop reliable, scalable methods and software that turn complex single-cell experiments into defensible biological evidence.
+          We develop statistical methods and open software for two connected goals: understanding how perturbations change cells, and making trustworthy discoveries when data, models, and analysis choices are complex.
         </p>
         <div class="button-row">
           <a class="button button--primary" href="/research/">Explore our research <span aria-hidden="true">→</span></a>
-          <a class="button button--secondary" href="/software/">Use our software <span aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="/software/">Use our software <span aria-hidden="true">→</span></a>
         </div>
         <div class="hero-affiliation">
-          <span class="mini-mark" aria-hidden="true"></span>
+          <img class="mini-mark" src="/brand/katsevich-lab-mark.svg" alt="" width="34" height="34" />
           <p><strong>University of Pennsylvania</strong><br />Statistics and Data Science</p>
         </div>
       </div>
       <div class="hero-art">
         <ResearchVisual />
-        <p class="figure-caption"><span>01</span> From perturbations and cellular measurements to calibrated statistical evidence.</p>
+        <p class="figure-caption"><span>01</span> One shared standard: useful scientific claims with uncertainty intact.</p>
       </div>
     </div>
     <div class="shell hero-index" aria-label="Research focus areas">
@@ -46,7 +47,7 @@ const description =
         <a href={`/research/#pillar-${pillar.number}`}>
           <span>{pillar.number}</span>
           <strong>{pillar.title}</strong>
-          <i aria-hidden="true">↗</i>
+          <i aria-hidden="true">→</i>
         </a>
       ))}
     </div>
@@ -56,8 +57,8 @@ const description =
     <div class="shell">
       <SectionHeader
         eyebrow="Our research"
-        title="Rigorous methods for ambitious experiments."
-        text="We work across the experimental lifecycle: planning a perturbational study, extracting reliable signal, and making valid discoveries at scale."
+        title="Two directions, one standard of evidence."
+        text="One program follows Perturb-seq from design to discovery. The other develops general statistical methods for flexible exploration without losing track of uncertainty."
         align="split"
       />
       <div class="pillar-grid">
@@ -98,7 +99,7 @@ const description =
       <SectionHeader
         eyebrow="Selected work"
         title="New ideas, from theory to practice."
-        text="Recent work connects statistical guarantees to real decisions in perturbational genomics."
+        text="Recent work connects rigorous statistical ideas to real decisions—from experimental design to adaptive testing."
         align="split"
       />
       <div class="featured-paper-list">
@@ -108,18 +109,16 @@ const description =
             <div class="paper-main">
               <div class="paper-meta"><span>{paper.year}</span><span>{paper.venue}</span></div>
               <h3>{paper.title}</h3>
-              <p>{paper.takeaway}</p>
+              <p>{paper.summary}</p>
               <div class="text-links">
                 {paper.links?.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
               </div>
             </div>
-            <div class:list={["paper-signal", `paper-signal--${index + 1}`]} aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
+            <PublicationVisual motif={paper.visual.motif} seed={paper.visual.seed} compact />
           </article>
         ))}
       </div>
-      <div class="section-link"><a href="/publications/">View all {publications.length} works <span aria-hidden="true">→</span></a></div>
+      <div class="section-link"><a href="/publications/">View {publications.length} selected works <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 

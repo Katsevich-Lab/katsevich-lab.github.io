@@ -33,6 +33,8 @@ const requiredOutputs = [
   "og.png",
   "favicon.png",
   "apple-touch-icon.png",
+  "brand/katsevich-lab-mark.svg",
+  "brand/katsevich-lab-mark-mono.svg",
   "files/CV_Eugene_Katsevich.pdf"
 ];
 
@@ -158,9 +160,10 @@ if (existsSync(publicationPage)) {
   const marker = Number(html.match(/data-publication-total="(\d+)"/i)?.[1]);
   if (!Number.isInteger(marker) || marker <= 0) fail("Publication page is missing its generated total marker");
   if (publicationCount !== marker) fail(`Publication marker says ${marker}, but ${publicationCount} records were rendered`);
-  if (!html.includes(`All ${marker} works`)) fail("Publication heading does not use the generated total");
+  if (!html.includes(`Selected ${marker} works`)) fail("Publication heading does not use the generated total");
+  if (!html.includes(`Showing all ${marker} selected works`)) fail("Publication count does not describe the selected set");
   const home = existsSync(join(rootPath, "index.html")) ? readOutput("index.html") : "";
-  if (!home.includes(`View all ${marker} works`)) fail("Homepage publication link does not use the generated total");
+  if (!home.includes(`View ${marker} selected works`)) fail("Homepage publication link does not use the generated total");
 }
 
 const robotsPath = join(rootPath, "robots.txt");

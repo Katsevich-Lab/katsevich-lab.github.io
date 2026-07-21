@@ -29,7 +29,7 @@ const { person, compact = false } = Astro.props;
     {person.note && <p class="person-note">{person.note}</p>}
     {person.links && (
       <div class="text-links">
-        {person.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+        {person.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> {link.href.startsWith("/") ? "→" : "↗"}</span></a>)}
       </div>
     )}
   </div>

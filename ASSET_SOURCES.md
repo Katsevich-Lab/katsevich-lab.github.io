@@ -10,9 +10,13 @@ Most portraits in `images/teampic/` were supplied by the lab or the people pictu
 
 The hex marks in `images/softwarepic/` are project marks for sceptre, PerturbPlan, and ondisc. They were already maintained by the lab website and are used only to identify their respective projects.
 
+## Lab mark
+
+`public/brand/katsevich-lab-mark.svg` and its monochrome companion were created for this redesign on July 21, 2026. The original vector artwork is owned by the lab and uses no third-party source material.
+
 ## Social preview
 
-`public/og.png` was generated for this redesign on July 21, 2026. It uses the site’s “calibrated signal” visual language and contains the exact site title, research positioning, and institution name.
+`public/og.png` was generated from `images/og-source.svg` for this redesign on July 21, 2026. It uses the site’s “calibrated signal” visual language and contains the exact site title, research positioning, and institution name.
 
 ## Favicon
 

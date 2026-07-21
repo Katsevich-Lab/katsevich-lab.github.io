@@ -121,10 +121,10 @@ try {
   }
 
   await interactionPage.goto(`${origin}/publications/`, { waitUntil: "networkidle" });
-  await interactionPage.getByRole("button", { name: "Genomics", exact: true }).click();
+  await interactionPage.getByRole("button", { name: "Perturb-seq", exact: true }).click();
   const countText = await interactionPage.locator("#publication-count").innerText();
-  if (!/Showing \d+ of \d+ works/.test(countText) || !interactionPage.url().includes("area=Genomics")) {
-    failures.push("The publication area filter does not update both count and shareable URL");
+  if (!/Showing \d+ of \d+ works/.test(countText) || !interactionPage.url().includes("theme=Perturb-seq")) {
+    failures.push("The publication theme filter does not update both count and shareable URL");
   }
   await interactionPage.close();
 

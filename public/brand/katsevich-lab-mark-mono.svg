@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="katsevich-mark-mono-title katsevich-mark-mono-description">
+  <title id="katsevich-mark-mono-title">Katsevich Lab mark, monochrome</title>
+  <desc id="katsevich-mark-mono-description">An abstract K in which a perturbation branches toward cellular measurements and a calibrated statistical interval.</desc>
+  <defs>
+    <mask id="perturbation-cutout">
+      <path d="M0 0h48v48H0z" fill="#fff"/>
+      <path d="m10.5 19.1 5 5-5 5-5-5 5-5Z" fill="#000" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#perturbation-cutout)">
+    <path d="M10.5 6.5v35M14 23.4 35.5 7.8M14 24.8l22.3 16.7M34.3 44.2l4-5.4" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="21.8" cy="17.7" r="2.15"/>
+    <circle cx="28.5" cy="12.9" r="2.6"/>
+    <circle cx="35.5" cy="7.8" r="3.15"/>
+    <circle cx="28.5" cy="35.7" r="3"/>
+  </g>
+  <path d="m10.5 19.1 5 5-5 5-5-5 5-5Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

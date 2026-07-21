@@ -9,9 +9,7 @@ const isCurrent = (href: string) =>
 <header class="site-header">
   <div class="shell header-inner">
     <a class="brand" href="/" aria-label="Katsevich Lab home">
-      <span class="brand-mark" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-      </span>
+      <img class="brand-mark" src="/brand/katsevich-lab-mark.svg" alt="" width="38" height="38" />
       <span class="brand-copy">
         <strong>Katsevich Lab</strong>
         <small>Statistics · University of Pennsylvania</small>
@@ -42,7 +40,7 @@ const isCurrent = (href: string) =>
           {navItems.map((item) => (
             <li>
               <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
-                {item.label}<span aria-hidden="true">↗</span>
+                {item.label}<span aria-hidden="true">→</span>
               </a>
             </li>
           ))}

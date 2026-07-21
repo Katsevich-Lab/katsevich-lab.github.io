@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationVisual from "../components/PublicationVisual.astro";
 import { publications, featuredPublications } from "../data/site";
 
 const description =
-  "Browse Katsevich Lab publications in statistical genomics, high-dimensional inference, perturbational experiment design, and computational imaging.";
-const areas = ["All", "Genomics", "Statistics", "Imaging"];
+  "Browse Katsevich Lab publications in Perturb-seq analysis and statistics for reliable discovery, with plain-language summaries, paper links, software, and reproducible code.";
+const themes = ["All", "Perturb-seq", "Reliable discovery"];
 const statuses = ["All", "Working manuscript", "Under review", "Published"];
 ---
 
@@ -15,7 +16,7 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
         <p class="eyebrow">Publications</p>
         <h1>Ideas, evidence, and <em>open outputs.</em></h1>
       </div>
-      <p class="page-lede">Our work spans statistical genomics, high-dimensional inference, experimental design, and computational imaging. Links connect papers to software and reproducible code where available.</p>
+      <p class="page-lede">Our selected papers span two connected directions: Perturb-seq from design to discovery, and statistics for reliable discovery. Each entry explains the scientific problem and main idea in plain language, then links the paper to software and reproducible code where available.</p>
     </div>
   </header>
 
@@ -25,10 +26,11 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
       <div class="publication-feature-grid">
         {featuredPublications.map((paper, index) => (
           <article class="publication-feature-card">
+            <PublicationVisual motif={paper.visual.motif} seed={paper.visual.seed} />
             <div class="publication-feature-meta"><span>0{index + 1}</span><span>{paper.year} · {paper.status}</span></div>
             <h3>{paper.title}</h3>
             <p class="publication-authors">{paper.authors}</p>
-            <p>{paper.takeaway}</p>
+            <p>{paper.summary}</p>
             <div class="text-links">
               {paper.links?.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
             </div>
@@ -41,15 +43,18 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
   <section class="section publication-index-section">
     <div class="shell">
       <div class="publication-index-heading">
-        <div><p class="eyebrow">Publication list</p><h2>All {publications.length} works</h2></div>
-        <p id="publication-count" aria-live="polite">Showing all {publications.length} works</p>
+        <div><p class="eyebrow">Publication list</p><h2>Selected {publications.length} works</h2></div>
+        <div class="publication-index-meta">
+          <p id="publication-count" aria-live="polite">Showing all {publications.length} selected works</p>
+          <a href="/files/CV_Eugene_Katsevich.pdf">Full CV <span aria-hidden="true">→</span></a>
+        </div>
       </div>
 
       <div class="publication-controls" aria-label="Publication filters">
         <fieldset>
-          <legend>Research area</legend>
-          <div class="filter-row" data-filter-group="area">
-            {areas.map((area, index) => <button type="button" data-value={area} aria-pressed={index === 0 ? "true" : "false"}>{area}</button>)}
+          <legend>Research direction</legend>
+          <div class="filter-row" data-filter-group="theme">
+            {themes.map((theme, index) => <button type="button" data-value={theme} aria-pressed={index === 0 ? "true" : "false"}>{theme}</button>)}
           </div>
         </fieldset>
         <fieldset>
@@ -62,13 +67,15 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
 
       <div class="publication-list" id="publication-list" data-publication-total={publications.length}>
         {publications.map((paper, index) => (
-          <article class="publication-item" data-area={paper.area} data-status={paper.status}>
+          <article class="publication-item" data-themes={paper.themes.join(",")} data-status={paper.status}>
             <div class="publication-number">{String(publications.length - index).padStart(2, "0")}</div>
+            <PublicationVisual motif={paper.visual.motif} seed={paper.visual.seed} compact />
             <div>
-              <div class="publication-meta"><span>{paper.year}</span><span>{paper.area}</span><span>{paper.status}</span></div>
+              <div class="publication-meta"><span>{paper.year}</span>{paper.themes.map((theme) => <span>{theme}</span>)}<span>{paper.status}</span></div>
               <h3>{paper.title}</h3>
               <p class="publication-authors">{paper.authors}</p>
               <p class="publication-venue">{paper.venue}</p>
+              <p class="publication-summary">{paper.summary}</p>
               {paper.links && (
                 <div class="text-links">
                   {paper.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
@@ -88,28 +95,28 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
   const items = [...document.querySelectorAll<HTMLElement>(".publication-item")];
   const count = document.querySelector<HTMLElement>("#publication-count");
   const empty = document.querySelector<HTMLElement>("#publication-empty");
-  const state = { area: "All", status: "All" };
+  const state = { theme: "All", status: "All" };
 
   const update = () => {
     let visible = 0;
     items.forEach((item) => {
       const show =
-        (state.area === "All" || item.dataset.area === state.area) &&
+        (state.theme === "All" || item.dataset.themes?.split(",").includes(state.theme)) &&
         (state.status === "All" || item.dataset.status === state.status);
       item.hidden = !show;
       if (show) visible += 1;
     });
-    if (count) count.textContent = visible === items.length ? `Showing all ${visible} works` : `Showing ${visible} of ${items.length} works`;
+    if (count) count.textContent = visible === items.length ? `Showing all ${visible} selected works` : `Showing ${visible} of ${items.length} works`;
     if (empty) empty.hidden = visible !== 0;
 
     const params = new URLSearchParams();
-    if (state.area !== "All") params.set("area", state.area);
+    if (state.theme !== "All") params.set("theme", state.theme);
     if (state.status !== "All") params.set("status", state.status);
     history.replaceState(null, "", params.size ? `${location.pathname}?${params}` : location.pathname);
   };
 
   const params = new URLSearchParams(location.search);
-  (["area", "status"] as const).forEach((key) => {
+  (["theme", "status"] as const).forEach((key) => {
     const value = params.get(key);
     const group = document.querySelector<HTMLElement>(`[data-filter-group="${key}"]`);
     const button = group?.querySelector<HTMLButtonElement>(`button[data-value="${CSS.escape(value ?? "")}"]`);
@@ -124,7 +131,7 @@ const statuses = ["All", "Working manuscript", "Under review", "Published"];
     group.addEventListener("click", (event) => {
       const button = (event.target as Element).closest<HTMLButtonElement>("button[data-value]");
       if (!button) return;
-      const key = group.dataset.filterGroup as "area" | "status";
+      const key = group.dataset.filterGroup as "theme" | "status";
       state[key] = button.dataset.value ?? "All";
       group.querySelectorAll("button").forEach((candidate) => candidate.setAttribute("aria-pressed", String(candidate === button)));
       update();

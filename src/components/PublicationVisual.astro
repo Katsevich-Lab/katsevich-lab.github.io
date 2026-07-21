@@ -1,0 +1,157 @@
+---
+interface Props {
+  motif: string;
+  seed: number;
+  compact?: boolean;
+}
+
+const { motif, seed, compact = false } = Astro.props;
+const dots = Array.from({ length: 12 }, (_, index) => ({
+  x: 30 + ((index * 37 + seed * 19) % 240),
+  y: 28 + ((index * 53 + seed * 23) % 112),
+  r: 3 + ((index + seed) % 3)
+}));
+const bars = Array.from({ length: 10 }, (_, index) => 24 + ((index * 29 + seed * 17) % 82));
+---
+
+<div class:list={["publication-visual", compact && "publication-visual--compact"]} data-motif={motif} aria-hidden="true">
+  <svg viewBox="0 0 300 180">
+    <rect class="pv-paper" width="300" height="180" />
+    <path class="pv-grid" d="M0 45h300M0 90h300M0 135h300M60 0v180M120 0v180M180 0v180M240 0v180" />
+
+    {motif === "perturbation" && (
+      <>
+        <g class="pv-guides"><rect x="24" y="38" width="74" height="16" /><rect x="34" y="70" width="74" height="16" /><rect x="24" y="102" width="74" height="16" /></g>
+        <path class="pv-flow" d="M110 78h36m-8-8 9 8-9 8" />
+        <g class="pv-cells"><circle cx="186" cy="53" r="22" /><circle cx="239" cy="81" r="22" /><circle cx="184" cy="119" r="22" /><circle cx="239" cy="81" r="7" /><circle cx="186" cy="53" r="7" /><circle cx="184" cy="119" r="7" /></g>
+      </>
+    )}
+
+    {motif === "design" && (
+      <>
+        <path class="pv-axis" d="M36 138V34M36 138h232" />
+        <path class="pv-curve" d="M45 128C80 123 92 83 126 78s39 32 72 12 35-48 64-52" />
+        <g class="pv-points">{dots.slice(0, 7).map((dot) => <circle cx={dot.x} cy={dot.y} r={dot.r} />)}</g>
+      </>
+    )}
+
+    {motif === "calibration" && (
+      <>
+        <line class="pv-reference" x1="150" y1="26" x2="150" y2="151" />
+        <g class="pv-intervals">
+          {bars.slice(0, 5).map((width, index) => <><line x1={150 - width / 2} y1={43 + index * 24} x2={150 + width / 2} y2={43 + index * 24} /><circle cx={150 + ((seed + index * 9) % 41) - 20} cy={43 + index * 24} r="5" /></>)}
+        </g>
+      </>
+    )}
+
+    {motif === "conditional" && (
+      <>
+        <path class="pv-axis" d="M34 140V30M34 140h232" />
+        <path class="pv-curve pv-curve--soft" d="M44 120C82 47 116 138 153 72s71 41 108-25" />
+        <g class="pv-points">{dots.map((dot) => <circle cx={dot.x} cy={dot.y} r={dot.r} />)}</g>
+      </>
+    )}
+
+    {motif === "selection" && (
+      <>
+        <line class="pv-threshold" x1="24" y1="71" x2="276" y2="71" />
+        <g class="pv-bars">{bars.map((height, index) => <rect x={28 + index * 25} y={148 - height} width="13" height={height} />)}</g>
+      </>
+    )}
+
+    {motif === "masking" && (
+      <>
+        <g class="pv-points">{dots.map((dot, index) => <circle class:list={[index % 3 === 0 && "is-masked"]} cx={dot.x} cy={dot.y} r={dot.r + 2} />)}</g>
+        <path class="pv-mask" d="M35 125 118 42l42 42 42-42 63 63v30H35Z" />
+      </>
+    )}
+
+    {motif === "regulation" && (
+      <>
+        <line class="pv-track" x1="24" y1="119" x2="276" y2="119" />
+        <g class="pv-elements"><rect x="38" y="106" width="30" height="26" /><rect x="100" y="106" width="18" height="26" /><rect x="154" y="106" width="40" height="26" /><rect x="238" y="106" width="24" height="26" /></g>
+        <g class="pv-arcs"><path d="M53 102Q87 30 109 102" /><path d="M109 102Q143 52 174 102" /><path d="M174 102Q221 22 250 102" /></g>
+      </>
+    )}
+
+    {motif === "integration" && (
+      <>
+        <g class="pv-layer pv-layer--one"><rect x="30" y="38" width="92" height="92" />{dots.slice(0, 6).map((dot) => <circle cx={38 + (dot.x % 76)} cy={45 + (dot.y % 76)} r="4" />)}</g>
+        <g class="pv-layer pv-layer--two"><rect x="178" y="38" width="92" height="92" />{bars.slice(0, 6).map((height, index) => <rect x={188 + index * 12} y={115 - height / 2} width="7" height={height / 2} />)}</g>
+        <path class="pv-flow" d="M131 84h38m-8-8 9 8-9 8" />
+      </>
+    )}
+
+    {motif === "measurement" && (
+      <>
+        <circle class="pv-latent" cx="150" cy="90" r="26" />
+        <g class="pv-proxies"><circle cx="62" cy="52" r="17" /><circle cx="238" cy="52" r="17" /><circle cx="62" cy="130" r="17" /><circle cx="238" cy="130" r="17" /></g>
+        <g class="pv-links"><path d="m83 61 43 19M217 61l-43 19M83 121l43-20M217 121l-43-20" /></g>
+      </>
+    )}
+
+    {motif === "multiple-testing" && (
+      <>
+        <path class="pv-axis" d="M30 145h240" />
+        <path class="pv-stair" d="M36 127h34V112h34V96h34V80h34V64h34V48h54" />
+        <g class="pv-points">{dots.slice(0, 9).map((_, index) => <circle cx={42 + index * 27} cy={128 - ((index * 17 + seed * 9) % 92)} r="5" />)}</g>
+      </>
+    )}
+
+    {motif === "theory" && (
+      <>
+        <circle class="pv-orbit" cx="150" cy="90" r="58" />
+        <ellipse class="pv-orbit" cx="150" cy="90" rx="105" ry="40" />
+        <path class="pv-diagonal" d="M52 139 248 41" />
+        <g class="pv-points">{dots.slice(0, 6).map((dot) => <circle cx={dot.x} cy={dot.y} r={dot.r + 1} />)}</g>
+      </>
+    )}
+  </svg>
+</div>
+
+<style>
+  .publication-visual {
+    --pv-ink: #102a43;
+    --pv-teal: #1b6b73;
+    --pv-coral: #b9472f;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #edf3f2;
+    color: var(--pv-ink);
+  }
+  svg { display: block; width: 100%; height: auto; }
+  .pv-paper { fill: #edf3f2; }
+  .pv-grid { fill: none; stroke: var(--pv-ink); stroke-opacity: .055; }
+  .pv-guides rect { fill: white; stroke: var(--pv-coral); stroke-width: 3; }
+  .pv-flow, .pv-branch, .pv-links path { fill: none; stroke: var(--pv-coral); stroke-width: 2; }
+  .pv-cells circle, .pv-proxies circle { fill: white; stroke: var(--pv-teal); stroke-width: 2; }
+  .pv-cells circle:nth-child(n+4) { fill: var(--pv-coral); stroke: none; }
+  .pv-axis, .pv-reference, .pv-track { fill: none; stroke: var(--pv-ink); stroke-width: 1.5; }
+  .pv-curve { fill: none; stroke: var(--pv-teal); stroke-width: 4; }
+  .pv-curve--soft { stroke-width: 2; opacity: .65; }
+  .pv-points circle, .pv-response-dots circle { fill: var(--pv-coral); }
+  .pv-points circle:nth-child(even) { fill: var(--pv-teal); }
+  .pv-intervals line { stroke: var(--pv-teal); stroke-width: 3; }
+  .pv-intervals circle { fill: var(--pv-coral); }
+  .pv-bars rect { fill: var(--pv-teal); }
+  .pv-bars rect:nth-child(3n+1) { fill: var(--pv-coral); }
+  .pv-threshold { stroke: var(--pv-coral); stroke-width: 2; stroke-dasharray: 6 5; }
+  .pv-mask { fill: #edf3f2; fill-opacity: .82; stroke: var(--pv-ink); stroke-opacity: .22; }
+  .pv-points .is-masked { fill: white; stroke: var(--pv-ink); stroke-width: 2; }
+  .pv-elements rect { fill: var(--pv-teal); }
+  .pv-elements rect:nth-child(even) { fill: var(--pv-coral); }
+  .pv-arcs path { fill: none; stroke: var(--pv-coral); stroke-width: 2; }
+  .pv-layer > rect { fill: white; stroke: var(--pv-ink); stroke-width: 1.5; }
+  .pv-layer--one circle { fill: var(--pv-teal); }
+  .pv-layer--two rect:not(:first-child) { fill: var(--pv-coral); stroke: none; }
+  .pv-latent { fill: var(--pv-coral); }
+  .pv-links path { stroke: var(--pv-teal); }
+  .pv-stair { fill: none; stroke: var(--pv-teal); stroke-width: 3; }
+  .pv-orbit, .pv-diagonal { fill: none; stroke: var(--pv-teal); stroke-width: 2; }
+  .pv-diagonal { stroke: var(--pv-coral); }
+  [data-motif="design"], [data-motif="selection"] { background: #f4ead7; }
+  [data-motif="design"] .pv-paper, [data-motif="selection"] .pv-paper { fill: #f4ead7; }
+  [data-motif="regulation"], [data-motif="integration"] { background: #f3e4df; }
+  [data-motif="regulation"] .pv-paper, [data-motif="integration"] .pv-paper { fill: #f3e4df; }
+</style>

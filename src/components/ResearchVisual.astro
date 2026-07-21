@@ -1,38 +1,93 @@
 <div
   class="research-visual"
   role="img"
-  aria-label="A conceptual diagram showing guide RNA perturbations producing varied cellular responses, which are transformed into a count matrix and calibrated statistical evidence."
+  aria-label="A structured scientific diagram moving from complex experiments and measurements to calibrated, reliable discoveries."
 >
-  <div class="visual-grid" aria-hidden="true"></div>
-  <div class="visual-label visual-label--input" aria-hidden="true">PERTURB</div>
-  <div class="visual-label visual-label--measure" aria-hidden="true">MEASURE</div>
-  <div class="visual-label visual-label--infer" aria-hidden="true">INFER</div>
+  <svg viewBox="0 0 660 520" aria-hidden="true">
+    <defs>
+      <pattern id="research-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+        <path d="M 28 0 L 0 0 0 28" fill="none" stroke="currentColor" stroke-opacity=".07" stroke-width="1" />
+      </pattern>
+    </defs>
 
-  <div class="guide-stack" aria-hidden="true">
-    <span>gRNA 01</span><span>gRNA 02</span><span>gRNA 03</span>
-  </div>
+    <rect class="rv-background" x="0" y="0" width="660" height="520" />
+    <rect class="rv-grid" x="0" y="0" width="660" height="520" fill="url(#research-grid)" />
 
-  <div class="cell-field" aria-hidden="true">
-    <span class="cell cell--1"><i></i><b></b><em></em></span>
-    <span class="cell cell--2"><i></i><b></b><em></em></span>
-    <span class="cell cell--3"><i></i><b></b><em></em></span>
-    <span class="cell cell--4"><i></i><b></b><em></em></span>
-    <span class="cell cell--5"><i></i><b></b><em></em></span>
-  </div>
+    <text class="rv-kicker" x="34" y="42">FROM COMPLEX DATA TO RELIABLE EVIDENCE</text>
+    <line class="rv-rule" x1="34" y1="62" x2="626" y2="62" />
 
-  <div class="count-matrix" aria-hidden="true">
-    {Array.from({ length: 30 }).map((_, index) => <i style={`--n:${(index * 7) % 11}`}></i>)}
-  </div>
+    <g class="rv-stage rv-stage--perturb">
+      <text class="rv-index" x="34" y="101">01</text>
+      <text class="rv-label" x="72" y="101">PERTURB</text>
+      <rect class="rv-card" x="34" y="122" width="170" height="282" />
+      <g class="rv-guides">
+        <rect x="54" y="151" width="90" height="27" rx="2" />
+        <rect x="68" y="190" width="90" height="27" rx="2" />
+        <rect x="54" y="229" width="90" height="27" rx="2" />
+        <path d="M60 164h38m-24 39h38m-52 39h38" />
+        <circle cx="129" cy="164" r="4" />
+        <circle cx="143" cy="203" r="4" />
+        <circle cx="129" cy="242" r="4" />
+      </g>
+      <path class="rv-branch" d="M105 278v20m0 0-35 35m35-35 35 35" />
+      <g class="rv-mini-cells">
+        <circle cx="70" cy="350" r="22" /><circle cx="70" cy="350" r="7" />
+        <circle cx="140" cy="350" r="22" /><circle cx="140" cy="350" r="7" />
+        <circle class="rv-cell-signal" cx="60" cy="340" r="3" />
+        <circle class="rv-cell-signal" cx="146" cy="360" r="3" />
+      </g>
+    </g>
 
-  <div class="evidence-card" aria-hidden="true">
-    <div class="evidence-axis"></div>
-    <span class="interval interval--1"></span>
-    <span class="interval interval--2"></span>
-    <span class="interval interval--3"></span>
-    <strong>calibrated<br />evidence</strong>
-  </div>
+    <path class="rv-connector" d="M212 263h30" />
+    <path class="rv-connector-tip" d="m236 257 7 6-7 6" />
 
-  <span class="flow flow--1" aria-hidden="true">→</span>
-  <span class="flow flow--2" aria-hidden="true">→</span>
-  <span class="flow flow--3" aria-hidden="true">→</span>
+    <g class="rv-stage rv-stage--measure">
+      <text class="rv-index" x="244" y="101">02</text>
+      <text class="rv-label" x="282" y="101">MEASURE</text>
+      <rect class="rv-card" x="244" y="122" width="170" height="282" />
+      <g class="rv-matrix">
+        {Array.from({ length: 30 }).map((_, index) => (
+          <rect
+            class:list={["rv-matrix-cell", `rv-matrix-cell--${(index * 7) % 5}`]}
+            x={264 + (index % 5) * 25}
+            y={151 + Math.floor(index / 5) * 25}
+            width="18"
+            height="18"
+            rx="1"
+          />
+        ))}
+      </g>
+      <line class="rv-axis" x1="264" y1="332" x2="393" y2="332" />
+      <g class="rv-response-dots">
+        <circle cx="276" cy="358" r="5" /><circle cx="297" cy="348" r="5" />
+        <circle cx="318" cy="368" r="5" /><circle cx="339" cy="344" r="5" />
+        <circle cx="360" cy="362" r="5" /><circle cx="381" cy="351" r="5" />
+      </g>
+    </g>
+
+    <path class="rv-connector" d="M422 263h30" />
+    <path class="rv-connector-tip" d="m446 257 7 6-7 6" />
+
+    <g class="rv-stage rv-stage--infer">
+      <text class="rv-index" x="454" y="101">03</text>
+      <text class="rv-label" x="492" y="101">INFER</text>
+      <rect class="rv-card rv-card--dark" x="454" y="122" width="172" height="282" />
+      <line class="rv-evidence-axis" x1="540" y1="155" x2="540" y2="353" />
+      <g class="rv-intervals">
+        <line x1="488" y1="185" x2="570" y2="185" /><circle cx="551" cy="185" r="6" />
+        <line x1="502" y1="231" x2="598" y2="231" /><circle cx="526" cy="231" r="6" />
+        <line x1="477" y1="277" x2="554" y2="277" /><circle cx="516" cy="277" r="6" />
+        <line x1="525" y1="323" x2="610" y2="323" /><circle cx="579" cy="323" r="6" />
+      </g>
+      <text class="rv-evidence-title" x="475" y="378">CALIBRATED EVIDENCE</text>
+    </g>
+
+    <g class="rv-footer-labels">
+      <text x="34" y="452">PERTURB-SEQ ANALYSIS</text>
+      <line x1="34" y1="467" x2="413" y2="467" />
+      <text x="454" y="452">RELIABLE DISCOVERY</text>
+      <line x1="454" y1="467" x2="626" y2="467" />
+    </g>
+    <text class="rv-footer-note" x="34" y="497">Design · measurement · calibration · discovery</text>
+  </svg>
 </div>

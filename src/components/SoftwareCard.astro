@@ -22,6 +22,16 @@ const { item, featured = false } = Astro.props;
   <h3>{item.name}</h3>
   <p class="software-description">{item.description}</p>
   {item.detail && <p class="software-detail">{item.detail}</p>}
+  {item.papers && (
+    <div class="software-evidence">
+      <p>Related papers</p>
+      <ul>
+        {item.papers.map((paper) => (
+          <li><a href={paper.href}>{paper.label}<span aria-hidden="true"> ↗</span></a></li>
+        ))}
+      </ul>
+    </div>
+  )}
   <ul class="tag-list" aria-label={`${item.name} attributes`}>
     {item.tags.map((tag) => <li>{tag}</li>)}
   </ul>

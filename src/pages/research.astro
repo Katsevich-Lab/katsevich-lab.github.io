@@ -4,7 +4,7 @@ import ResearchVisual from "../components/ResearchVisual.astro";
 import { researchPillars } from "../data/site";
 
 const description =
-  "Explore the Katsevich Lab research program in single-cell CRISPR analysis, perturbational experiment design, and high-dimensional statistical inference.";
+  "Explore the Katsevich Lab research program in Perturb-seq from design to discovery and statistics for reliable discovery in complex data.";
 ---
 
 <BaseLayout title="Research" description={description}>
@@ -12,9 +12,9 @@ const description =
     <div class="shell page-hero-grid">
       <div>
         <p class="eyebrow">Research program</p>
-        <h1>From perturbation to <em>reliable evidence.</em></h1>
+        <h1>Two paths to <em>reliable discovery.</em></h1>
         <p class="page-lede">
-          Modern genomic screens can perturb thousands of targets and measure millions of cellular responses. We develop the statistical ideas and software needed to design these experiments, separate signal from artifact, and draw defensible conclusions.
+          Our two programs meet at one question: how can complex data yield claims that are useful and statistically credible? Perturb-seq is a particularly rich setting; our broader statistical work develops principles that travel beyond any single assay.
         </p>
       </div>
       <ResearchVisual />
@@ -47,18 +47,16 @@ const description =
                 </ul>
               </div>
               <div>
-                <h3>{index === 0 ? "Why it matters" : index === 1 ? "Design decisions" : "Statistical ideas"}</h3>
+                <h3>{index === 0 ? "Across the lifecycle" : "Statistical ideas"}</h3>
                 <p>
-                  {index === 0 && "Small modeling or quality-control failures can create convincing false signals. Calibration turns scale into trustworthy discovery."}
-                  {index === 1 && "Cells, guides, sequencing depth, effect sizes, and multiplicity interact. Good design makes those tradeoffs visible before resources are committed."}
-                  {index === 2 && "Accurate tail probabilities and robust tests are essential when many weak signals, complex dependence, and imperfect models meet."}
+                  {index === 0 && "Power, cost, guide assignment, association testing, and biological interpretation interact. Treating them as one lifecycle makes ambitious screens more efficient and their discoveries more trustworthy."}
+                  {index === 1 && "Conditional tests, robust scores, masking, multiple-testing guarantees, and efficient approximations make flexible scientific exploration compatible with trustworthy conclusions."}
                 </p>
               </div>
             </div>
             <div class="button-row button-row--compact">
-              {index === 0 && <><a class="button button--dark" href="https://katsevich-lab.github.io/sceptre/">Use sceptre <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?area=Genomics">Related papers <span aria-hidden="true">→</span></a></>}
-              {index === 1 && <><a class="button button--dark" href="https://perturbplan.com/">Launch PerturbPlan <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="https://doi.org/10.64898/2026.05.22.727199">Read the preprint <span aria-hidden="true">↗</span></a></>}
-              {index === 2 && <><a class="button button--dark" href="https://arxiv.org/abs/2407.08911">Read about spaCRT <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?area=Statistics">Related papers <span aria-hidden="true">→</span></a></>}
+              {index === 0 && <><a class="button button--dark" href="https://katsevich-lab.github.io/sceptre/">Use sceptre <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="https://perturbplan.com/">Launch PerturbPlan <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?theme=Perturb-seq">Related papers <span aria-hidden="true">→</span></a></>}
+              {index === 1 && <><a class="button button--dark" href="https://arxiv.org/abs/2407.08911">Read about spaCRT <span aria-hidden="true">↗</span></a><a class="button button--quiet" href="/publications/?theme=Reliable+discovery">Related papers <span aria-hidden="true">→</span></a></>}
             </div>
           </div>
         </div>

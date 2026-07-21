@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#102a43" stroke-opacity=".055" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#faf9f6" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <g transform="translate(58 58) scale(1.35)">
+    <path d="M10.5 6.5v35" fill="none" stroke="#081c2d" stroke-width="4" stroke-linecap="round" />
+    <path d="M14 23.4 35.5 7.8" fill="none" stroke="#1b6b73" stroke-width="3.25" stroke-linecap="round" />
+    <circle cx="21.8" cy="17.7" r="2.15" fill="#1b6b73" />
+    <circle cx="28.5" cy="12.9" r="2.6" fill="#1b6b73" />
+    <circle cx="35.5" cy="7.8" r="3.15" fill="#1b6b73" />
+    <path d="m14 24.8 22.3 16.7M34.3 44.2l4-5.4" fill="none" stroke="#081c2d" stroke-width="3" stroke-linecap="round" />
+    <circle cx="28.5" cy="35.7" r="3" fill="#b9472f" />
+    <path d="m10.5 19.1 5 5-5 5-5-5 5-5Z" fill="#b9472f" stroke="#faf9f6" stroke-width="1.5" />
+  </g>
+
+  <text x="58" y="205" fill="#081c2d" font-family="Georgia, 'Times New Roman', serif" font-size="76">Katsevich Lab</text>
+  <line x1="58" y1="242" x2="103" y2="242" stroke="#b9472f" stroke-width="3" />
+  <text x="120" y="250" fill="#1b6b73" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2">PERTURB-SEQ</text>
+  <text x="58" y="310" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Statistics for reliable discovery</text>
+  <text x="58" y="351" fill="#536878" font-family="Arial, Helvetica, sans-serif" font-size="20">From experimental design to trustworthy conclusions</text>
+  <line x1="58" y1="411" x2="504" y2="411" stroke="#c8d1d5" />
+  <text x="58" y="456" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="2.2">UNIVERSITY OF PENNSYLVANIA</text>
+
+  <g transform="translate(606 54)">
+    <rect width="536" height="522" fill="#edf3f2" stroke="#9dacad" />
+    <rect width="536" height="522" fill="url(#grid)" />
+    <text x="30" y="40" fill="#1b6b73" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7">FROM COMPLEX DATA TO RELIABLE EVIDENCE</text>
+    <line x1="30" y1="58" x2="506" y2="58" stroke="#9dacad" />
+
+    <g transform="translate(30 86)">
+      <text x="0" y="0" fill="#b9472f" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">01</text>
+      <text x="35" y="0" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">PERTURB</text>
+      <rect y="20" width="140" height="282" fill="#fff" fill-opacity=".78" stroke="#9dacad" />
+      <g transform="translate(22 60)">
+        <rect width="78" height="25" fill="#fff" stroke="#b9472f" stroke-width="3" />
+        <rect x="12" y="42" width="78" height="25" fill="#fff" stroke="#1b6b73" stroke-width="3" />
+        <rect y="84" width="78" height="25" fill="#fff" stroke="#b9472f" stroke-width="3" />
+        <circle cx="65" cy="12" r="4" fill="#b9472f" />
+        <circle cx="77" cy="54" r="4" fill="#1b6b73" />
+        <circle cx="65" cy="96" r="4" fill="#b9472f" />
+        <path d="M45 127v27m0 0-26 28m26-28 26 28" fill="none" stroke="#b9472f" stroke-width="2" />
+        <circle cx="19" cy="200" r="18" fill="#fff" stroke="#1b6b73" stroke-width="2" />
+        <circle cx="71" cy="200" r="18" fill="#fff" stroke="#1b6b73" stroke-width="2" />
+      </g>
+    </g>
+
+    <path d="M176 247h24m-7-7 8 7-8 7" fill="none" stroke="#b9472f" stroke-width="2" />
+
+    <g transform="translate(206 86)">
+      <text x="0" y="0" fill="#b9472f" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">02</text>
+      <text x="35" y="0" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">MEASURE</text>
+      <rect y="20" width="140" height="282" fill="#fff" fill-opacity=".78" stroke="#9dacad" />
+      <g transform="translate(22 58)">
+        <rect width="17" height="17" fill="#d6e5e5" /><rect x="23" width="17" height="17" fill="#b9472f" /><rect x="46" width="17" height="17" fill="#1b6b73" /><rect x="69" width="17" height="17" fill="#1b6b73" /><rect x="92" width="17" height="17" fill="#99b9ba" />
+        <rect y="23" width="17" height="17" fill="#d6e5e5" /><rect x="23" y="23" width="17" height="17" fill="#b9472f" /><rect x="46" y="23" width="17" height="17" fill="#1b6b73" /><rect x="69" y="23" width="17" height="17" fill="#1b6b73" /><rect x="92" y="23" width="17" height="17" fill="#99b9ba" />
+        <rect y="46" width="17" height="17" fill="#d6e5e5" /><rect x="23" y="46" width="17" height="17" fill="#b9472f" /><rect x="46" y="46" width="17" height="17" fill="#1b6b73" /><rect x="69" y="46" width="17" height="17" fill="#1b6b73" /><rect x="92" y="46" width="17" height="17" fill="#99b9ba" />
+        <rect y="69" width="17" height="17" fill="#d6e5e5" /><rect x="23" y="69" width="17" height="17" fill="#b9472f" /><rect x="46" y="69" width="17" height="17" fill="#1b6b73" /><rect x="69" y="69" width="17" height="17" fill="#1b6b73" /><rect x="92" y="69" width="17" height="17" fill="#99b9ba" />
+        <rect y="92" width="17" height="17" fill="#d6e5e5" /><rect x="23" y="92" width="17" height="17" fill="#b9472f" /><rect x="46" y="92" width="17" height="17" fill="#1b6b73" /><rect x="69" y="92" width="17" height="17" fill="#1b6b73" /><rect x="92" y="92" width="17" height="17" fill="#99b9ba" />
+        <line y1="143" x2="109" y2="143" stroke="#9dacad" />
+        <circle cx="12" cy="176" r="5" fill="#1b6b73" /><circle cx="34" cy="164" r="5" fill="#b9472f" /><circle cx="56" cy="182" r="5" fill="#1b6b73" /><circle cx="78" cy="160" r="5" fill="#b9472f" /><circle cx="100" cy="176" r="5" fill="#1b6b73" />
+      </g>
+    </g>
+
+    <path d="M352 247h24m-7-7 8 7-8 7" fill="none" stroke="#b9472f" stroke-width="2" />
+
+    <g transform="translate(382 86)">
+      <text x="0" y="0" fill="#b9472f" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">03</text>
+      <text x="35" y="0" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">INFER</text>
+      <rect y="20" width="124" height="282" fill="#081c2d" />
+      <line x1="62" y1="57" x2="62" y2="249" stroke="#fff" stroke-opacity=".25" />
+      <g stroke="#b7d3d3" stroke-width="3">
+        <line x1="24" y1="91" x2="90" y2="91" /><line x1="38" y1="138" x2="105" y2="138" /><line x1="17" y1="185" x2="80" y2="185" /><line x1="49" y1="232" x2="111" y2="232" />
+      </g>
+      <g fill="#b9472f"><circle cx="72" cy="91" r="6" /><circle cx="55" cy="138" r="6" /><circle cx="48" cy="185" r="6" /><circle cx="90" cy="232" r="6" /></g>
+    </g>
+
+    <text x="30" y="446" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">PERTURB-SEQ ANALYSIS</text>
+    <text x="382" y="446" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">RELIABLE DISCOVERY</text>
+    <line x1="30" y1="463" x2="346" y2="463" stroke="#9dacad" />
+    <line x1="382" y1="463" x2="506" y2="463" stroke="#9dacad" />
+    <text x="30" y="495" fill="#536878" font-family="Arial, Helvetica, sans-serif" font-size="12">Design · measurement · calibration · discovery</text>
+  </g>
+</svg>
