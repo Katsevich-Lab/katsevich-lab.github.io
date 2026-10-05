@@ -10,24 +10,24 @@
   
 - name: <a href="https://www.jld-stats.com/">Louis Deutsch</a>
   photo: joseph-deutsch.jpeg
-  position: Statistics PhD student at UPenn
+  position: Staff Researcher at UPenn
   role: <i>Lab Member</i> (Summer 2023 - present)
 
-- name: Abhinav Chakraborty
+- name: <a href="https://abhinavc3.github.io/">Abhinav Chakraborty</a>
   photo: abhinav-chakraborty.jpeg
-  position: Statistics PhD student at UPenn
+  position: Founder’s Postdoctoral Fellow in Statistics at Columbia University
   role: <i>Collaborator</i> (Fall 2021 - present)
     
-- name: <a href="https://jzhang1937.github.io/">Jeff Zhang</a> 
-  photo: jeff-zhang.jpeg
-  position: Statistics PhD student at UPenn
-  role: <i>Collaborator</i> (Spring 2023 - present)
-
 - name: <a href="https://timothy-barry.github.io/">Timothy Barry</a>
   photo: tim-barry.jpeg
-  position: Postdoc at Harvard Biostatistics
+  position: Postdoctoral researcher at Boston Children’s Hospital and Massachusetts General Hospital
   role: <i>Collaborator</i> (Spring 2024 - present)
   
 # - name: "This could be you!"
 #  photo: smiley.png
 #  info: <a href="mailto:ekatsevi@wharton.upenn.edu">Email Gene</a> for more info
+
+- name: <a href="https://leejunu.github.io/">Junu Lee</a>
+  photo: junu-lee.jpg
+  position: Statistics PhD student at UPenn
+  role: <i>Collaborator</i>

@@ -1,7 +1,7 @@
-- name: Abhinav Chakraborty
+- name: <a href="https://abhinavc3.github.io/">Abhinav Chakraborty</a>
   photo: abhinav-chakraborty.jpeg
-  info: Statistics PhD student at UPenn, started fall 2021
-  email: abch@wharton.upenn.edu
+  info: Founder’s Postdoctoral Fellow in Statistics at Columbia University
+  email: ac4662@columbia.edu
   number_educ: 0
   education1: 
   
@@ -12,9 +12,9 @@
   number_educ: 0
   education1: 
     
-- name: Jeff Zhang
-  photo: jeff-zhang.jpeg
-  info: Statistics PhD student at UPenn, started spring 2023
-  email: 
+
+- name: <a href="https://leejunu.github.io/">Junu Lee</a>
+  photo: junu-lee.jpg
+  info: Statistics PhD student at UPenn
+  email: junulee@wharton.upenn.edu
   number_educ: 0
-  education1: 
