@@ -113,3 +113,5 @@ height: 150px;
 
 // Keep team portraits uniform regardless of the source photo aspect ratio.
 #gridid img.team-portrait { width: 96px; height: 96px; object-fit: cover; }
+
+#gridid img.team-portrait[src*="Eugene_Katsevich_headshot_2026_tight"] { object-position: center top; }
